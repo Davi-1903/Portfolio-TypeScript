@@ -1,4 +1,4 @@
-import type React from 'react';
+import type { JSX } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
 interface SectionEmergeProps {
@@ -9,7 +9,7 @@ interface SectionEmergeProps {
 export default function SectionEmerge({
     children,
     threshold = 0.1,
-}: SectionEmergeProps): React.JSX.Element {
+}: SectionEmergeProps): JSX.Element {
     const [emerge, setEmerge] = useState<boolean>(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
 

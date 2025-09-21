@@ -1,4 +1,4 @@
-import type React from 'react';
+import type { JSX } from 'react';
 import { IconBrandGithub, IconBrandInstagram, IconMail } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
 import './Header.css';
@@ -31,7 +31,7 @@ const linksList: Link[] = [
     },
 ];
 
-export default function Header(): React.JSX.Element {
+export default function Header(): JSX.Element {
     const [dropHeader, setDropHeader] = useState<boolean>(true);
     const [opacity, setOpacity] = useState<number>(0);
     const lastY = useRef<number | null>(null);

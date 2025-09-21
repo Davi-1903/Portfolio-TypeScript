@@ -47,6 +47,38 @@
     gap: 3rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+.project-card {
+    height: 100%;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: .5rem 1rem 2rem #30304040;
+}
+
+.project-card .text-container {
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.project-card > img {
+    width: 100%;
+    margin-block: -6px;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.project-card .text-container > h3 {
+    font: bold 2.4rem var(--font);
+    color: var(--color1);
+    margin-bottom: 1rem;
+}
+
+.project-card .text-container > p {
+    font: normal 1.2rem var(--font2);
+    color: var(--color1);
+}
+
 @keyframes emergeLeft {
     from {
         opacity: 0;

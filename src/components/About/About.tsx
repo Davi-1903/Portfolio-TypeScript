@@ -1,9 +1,9 @@
-import type React from 'react';
+import type { JSX } from 'react';
 import SectionEmerge from '../SectionEmerge/SectionEmerge';
 import Me from '../../media/Me.jpg';
 import './About.css';
 
-export default function About(): React.JSX.Element {
+export default function About(): JSX.Element {
     return (
         <SectionEmerge threshold={0.4}>
             <section className='about'>

@@ -1,4 +1,4 @@
-import type React from 'react';
+import type { JSX } from 'react';
 import SectionEmerge from '../SectionEmerge/SectionEmerge';
 import { projectList, type Project } from './projectsList';
 import './Projects.css';
@@ -7,7 +7,7 @@ interface CardProjectProps {
     project: Project;
 }
 
-function CardProject({ project }: CardProjectProps): React.JSX.Element {
+function CardProject({ project }: CardProjectProps): JSX.Element {
     return (
         <a href={project.projectURL} target='_blank'>
             <article className='project-card'>
@@ -21,7 +21,7 @@ function CardProject({ project }: CardProjectProps): React.JSX.Element {
     );
 }
 
-export default function Projects(): React.JSX.Element {
+export default function Projects(): JSX.Element {
     return (
         <SectionEmerge threshold={0.2}>
             <section className='projects'>

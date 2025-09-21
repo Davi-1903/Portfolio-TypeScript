@@ -1,8 +1,8 @@
-import type React from 'react';
+import type { JSX } from 'react';
 import { useEffect, useState } from 'react';
 import './Welcome.css';
 
-export default function Welcome(): React.JSX.Element {
+export default function Welcome(): JSX.Element {
     const [scrolled, setScrolled] = useState<number>(0);
 
     useEffect(() => {
