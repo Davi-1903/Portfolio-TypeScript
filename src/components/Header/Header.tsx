@@ -60,7 +60,7 @@ export default function Header(): JSX.Element {
             className={dropHeader ? 'drop' : ''}
             style={{
                 backgroundColor: `rgba(255, 255, 255, ${opacity})`,
-                boxShadow: `0 .5rem 1rem rgba(48, 48, 64, ${opacity / 4})`,
+                borderBottom: `2px solid rgba(48, 48, 64, ${opacity})`,
             }}
         >
             <h1 id='logo'>Davi</h1>

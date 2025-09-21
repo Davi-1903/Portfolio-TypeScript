@@ -17,11 +17,13 @@
 .about .picture-container {
     opacity: 0;
     transform: translateX(-25%);
+    border: 2px solid var(--color1);
+    padding: 1rem;
+    box-shadow: .5rem .5rem 0 var(--color1);
 }
 
 .about .picture-container > img {
     width: 100%;
-    border-radius: 3rem;
     margin-bottom: -6px;
 }
 
