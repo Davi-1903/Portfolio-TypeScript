@@ -1,0 +1,39 @@
+header {
+    --header-height: 100px;
+    z-index: 1;
+    position: fixed;
+    top: calc(var(--header-height) * -1);
+    height: var(--header-height);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    transition: all 250ms;
+}
+
+header.drop {
+    top: 0;
+}
+
+header #logo {
+    font: bold 3rem var(--font-title);
+    color: var(--color1);
+}
+
+header > nav .menu {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header > nav .menu svg {
+    width: 32pt;
+    height: 32pt;
+    stroke: var(--color1);
+    transition: all 125ms;
+}
+
+header > nav .menu li:hover svg {
+    transform: translateY(-0.5rem);
+}

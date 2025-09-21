@@ -1,0 +1,10 @@
+footer {
+    background-color: var(--color1);
+    padding-block: .5rem;
+}
+
+footer > p {
+    font: normal 1.2rem var(--font);
+    text-align: center;
+    color: var(--color2);
+}
