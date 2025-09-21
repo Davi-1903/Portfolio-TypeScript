@@ -37,13 +37,13 @@ export default function Header(): JSX.Element {
     const lastY = useRef<number | null>(null);
 
     useEffect(() => {
-        function handlerScroll() {
+        function handlerScroll(): void {
             const scrolled = window.scrollY;
             setDropHeader(lastY.current === null || lastY.current > scrolled);
             lastY.current = scrolled;
         }
 
-        function handlerOpacity() {
+        function handlerOpacity(): void {
             setOpacity(Math.min(window.scrollY / window.innerHeight, 1));
         }
 

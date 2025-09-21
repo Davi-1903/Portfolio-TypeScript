@@ -6,7 +6,7 @@ export default function Welcome(): JSX.Element {
     const [scrolled, setScrolled] = useState<number>(0);
 
     useEffect(() => {
-        function handlerScroll() {
+        function handlerScroll(): void {
             setScrolled(window.scrollY / 2);
         }
 
