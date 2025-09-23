@@ -18,7 +18,7 @@ export const projectList: Project[] = [
     {
         id: 3,
         name: 'Dino-IA',
-        description: 'Project made to study neural networks',
+        description: 'Secund project made to study neural networks',
         imageURL: 'src/media/projects/Dino-IA.png',
         projectURL: 'https://github.com/Davi-1903/Dino-IA',
     },
@@ -28,5 +28,19 @@ export const projectList: Project[] = [
         description: 'Simple application to learn how to integrate Flask and React',
         imageURL: 'src/media/projects/Personagens.png',
         projectURL: 'https://github.com/Davi-1903/Personagens',
+    },
+    {
+        id: 5,
+        name: 'DACM fit',
+        description: 'Group project for programming subject',
+        imageURL: 'src/media/projects/DACM fit.png',
+        projectURL: 'https://github.com/Davi-1903/DACM-fit'
+    },
+    {
+        id: 6,
+        name: 'Pong-IA',
+        description: 'First project mate to study neural networks',
+        imageURL: 'src/media/projects/Pong-IA.png',
+        projectURL: 'https://github.com/Davi-1903/Pong-IA'
     },
 ];
