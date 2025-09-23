@@ -3,7 +3,7 @@ import type { Project } from './Objects';
 
 export interface SectionEmergeProps {
     children: ReactNode;
-    threshold?: number;
+    threshold: number;
 }
 
 export interface CardProjectProps {
