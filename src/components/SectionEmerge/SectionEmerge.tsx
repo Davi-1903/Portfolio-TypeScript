@@ -1,10 +1,6 @@
 import type { JSX } from 'react';
 import { useEffect, useRef, useState } from 'react';
-
-interface SectionEmergeProps {
-    children: React.ReactNode;
-    threshold?: number;
-}
+import type { SectionEmergeProps } from '../../interfaces/Props';
 
 export default function SectionEmerge({
     children,

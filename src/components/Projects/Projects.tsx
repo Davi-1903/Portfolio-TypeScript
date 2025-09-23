@@ -1,11 +1,8 @@
 import type { JSX } from 'react';
 import SectionEmerge from '../SectionEmerge/SectionEmerge';
-import { projectList, type Project } from './projectsList';
+import { projectList } from './projectsList';
+import type { CardProjectProps } from '../../interfaces/Props';
 import './Projects.css';
-
-interface CardProjectProps {
-    project: Project;
-}
 
 function CardProject({ project }: CardProjectProps): JSX.Element {
     return (
@@ -23,12 +20,10 @@ function CardProject({ project }: CardProjectProps): JSX.Element {
 
 export default function Projects(): JSX.Element {
     return (
-        <SectionEmerge threshold={0.2}>
+        <SectionEmerge threshold={0.1}>
             <section className='projects'>
                 <div className='title-container'>
-                    <div className='title-wrapper'>
-                        <h2>Projects</h2>
-                    </div>
+                    <h2>Projects</h2>
                 </div>
                 <div className='projects-container'>
                     {projectList.map(project => (

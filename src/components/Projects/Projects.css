@@ -1,9 +1,11 @@
 .projects {
+    overflow-x: hidden;
     min-height: 100vh;
     background-color: var(--color2);
-    padding: 6rem;
+    padding: 0 6rem 6rem 6rem;
     display: flex;
-    gap: 6rem
+    flex-direction: column;
+    gap: 6rem;
 }
 
 .projects .title-container {
@@ -11,24 +13,14 @@
     transform: translateX(-25%);
 }
 
-.section-emerge.emerge .projects .title-container {
-    animation: emergeLeft 1.5s both;
-}
-
-.projects .title-container > .title-wrapper {
-    position: sticky;
-    top: 6rem;
-    height: calc(100vh - 12rem);
-    display: grid;
-    place-items: center;
-}
-
-.projects .title-container > .title-wrapper h2 {
-    cursor: vertical-text;
+.projects .title-container > h2 {
     font: bold 4rem / 1.5 var(--font);
     color: var(--color1);
-    rotate: -90deg;
-    margin-inline: -6rem;
+    text-align: center;
+}
+
+.section-emerge.emerge .projects .title-container {
+    animation: emergeUp 1.5s both;
 }
 
 .projects .projects-container {
@@ -37,7 +29,7 @@
 }
 
 .section-emerge.emerge .projects .projects-container {
-    animation: emergeRight 1.5s both;
+    animation: emergeDown 1.5s both;
 }
 
 .projects .projects-container {
@@ -84,10 +76,10 @@ a:hover .project-card {
     color: var(--color1);
 }
 
-@keyframes emergeLeft {
+@keyframes emergeUp {
     from {
         opacity: 0;
-        transform: translateX(-25%);
+        transform: translateY(-25%);
     }
     
     to {
@@ -96,10 +88,10 @@ a:hover .project-card {
     }
 }
 
-@keyframes emergeRight {
+@keyframes emergeDown {
     from {
         opacity: 0;
-        transform: translateX(25%);
+        transform: translateY(25%);
     }
     
     to {
@@ -111,6 +103,7 @@ a:hover .project-card {
 @media (width < 800px) {
     .projects {
         flex-wrap: wrap;
+        padding: 2rem;
     }
 
     .projects .title-container {
@@ -123,7 +116,12 @@ a:hover .project-card {
 
     .projects .title-container > .title-wrapper h2 {
         cursor: text;
+        font-size: 2rem;
         rotate: none;
         margin-inline: 0;
+    }
+
+    .projects .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
 }

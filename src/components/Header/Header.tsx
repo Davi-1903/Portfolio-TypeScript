@@ -1,14 +1,8 @@
 import type { JSX } from 'react';
 import { IconBrandGithub, IconBrandInstagram, IconMail } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
+import type { Link } from '../../interfaces/Objects';
 import './Header.css';
-
-interface Link {
-    id: number;
-    icon: React.ReactNode;
-    url: string;
-    target: string;
-}
 
 const linksList: Link[] = [
     {

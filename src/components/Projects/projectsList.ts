@@ -1,10 +1,4 @@
-export interface Project {
-    id: number;
-    name: string;
-    description: string;
-    imageURL: string;
-    projectURL: string;
-}
+import type { Project } from "../../interfaces/Objects";
 
 export const projectList: Project[] = [
     {

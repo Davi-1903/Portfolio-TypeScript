@@ -1,6 +1,6 @@
 footer {
     background-color: var(--color1);
-    padding-block: .5rem;
+    padding-block: 1rem;
 }
 
 footer > p {
