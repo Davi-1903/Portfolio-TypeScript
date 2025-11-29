@@ -1,8 +1,6 @@
-import type { JSX } from 'react';
 import { useEffect, useState } from 'react';
-import './Welcome.css';
 
-export default function Welcome(): JSX.Element {
+export default function Welcome() {
     const [scrolled, setScrolled] = useState<number>(0);
 
     useEffect(() => {
@@ -16,12 +14,14 @@ export default function Welcome(): JSX.Element {
 
     return (
         <section
-            className='welcome'
+            className='-z-1 relative h-screen bg-welcome grid place-items-center'
             style={{
                 transform: `translateY(${scrolled}px)`,
             }}
         >
-            <h1>Hi! I'm Davi</h1>
+            <h1 className='font-bold text-5xl font-primary text-black opacity-0 animate-welcome md:text-8xl'>
+                Hi! I'm Davi
+            </h1>
         </section>
     );
 }

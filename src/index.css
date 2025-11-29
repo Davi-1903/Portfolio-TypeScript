@@ -2,21 +2,137 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
+@import 'tailwindcss';
 
 :root {
-    --font: 'Chivo Mono';
-    --font2: 'Roboto';
+    --font-primary: 'Chivo Mono';
+    --font-secundary: 'Roboto';
     --font-title: 'Parisienne';
-    --color1: #303040;
-    --color2: #FFFAFA;
+    --base-white: #FFFAFA;
+    --base-black: #303040;
 }
 
-html {
-    scroll-behavior: smooth;
+@theme inline {
+    --height-header: 100px;
+    --font-primary: var(--font-primary);
+    --font-secundary: var(--font-secundary);
+    --font-title: var(--font-title);
+    --color-white: var(--base-white);
+    --color-black: var(--base-black);
+}
+
+@layer base {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    .animate-welcome {
+        animation: animation-welcome 2s 1s forwards;
+    }
+}
+
+@utility bg-welcome {
+    background: url('/background.jpg') center bottom no-repeat;
+    background-size: cover;
+}
+
+@utility shadow-basic {
+    box-shadow: .5rem .5rem 0 var(--base-black);
+}
+
+@utility shadow-about {
+    box-shadow: 0 0 3rem 3rem var(--base-white);
+}
+
+@utility grid-cols-fit-96 {
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+
+@utility grid-cols-fit-72 {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+@utility animate-translate-left {
+    animation: animation-translate-left 1.5s forwards;
+}
+
+@utility animate-translate-right {
+    animation: animation-translate-right 1.5s forwards;
+}
+
+@utility animate-translate-down {
+    animation: animation-translate-down 1.5s forwards;
+}
+
+@utility animate-translate-up {
+    animation: animation-translate-up 1.5s forwards;
+}
+
+@keyframes animation-welcome {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes animation-translate-left {
+    from {
+        transform: translateX(-25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-translate-right {
+    from {
+        transform: translateX(25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-translate-down {
+    from {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-translate-up {
+    from {
+        transform: translateY(-25%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
 }

@@ -6,6 +6,7 @@ export interface Project {
     description: string;
     imageURL: string;
     projectURL: string;
+    technologies: { name: string; icon: ReactNode }[];
 }
 
 export interface Link {

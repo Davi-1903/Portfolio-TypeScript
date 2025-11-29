@@ -1,31 +1,33 @@
-import type { JSX } from 'react';
 import { IconBrandGithub, IconBrandInstagram, IconMail } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
 import type { Link } from '../../interfaces/Objects';
-import './Header.css';
 
 const linksList: Link[] = [
     {
         id: 1,
-        icon: <IconBrandGithub />,
+        icon: (
+            <IconBrandGithub className='w-[32pt] h-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
+        ),
         url: 'https://github.com/Davi-1903',
         target: '_blank',
     },
     {
         id: 2,
-        icon: <IconBrandInstagram />,
+        icon: (
+            <IconBrandInstagram className='w-[32pt] h-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
+        ),
         url: 'https://instagram.com/davifran11',
         target: '_blank',
     },
     {
         id: 3,
-        icon: <IconMail />,
+        icon: <IconMail className='w-[32pt] h-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />,
         url: 'mailto:franciscodavi327@gmail.com',
         target: '_self',
     },
 ];
 
-export default function Header(): JSX.Element {
+export default function Header() {
     const [dropHeader, setDropHeader] = useState<boolean>(true);
     const [opacity, setOpacity] = useState<number>(0);
     const lastY = useRef<number | null>(null);
@@ -51,15 +53,17 @@ export default function Header(): JSX.Element {
 
     return (
         <header
-            className={dropHeader ? 'drop' : ''}
+            className={`h-header z-1 fixed w-full px-8 flex items-center justify-between transition-all duration-200 ${
+                dropHeader ? 'top-0' : '-top-(--height-header)'
+            }`}
             style={{
-                backgroundColor: `rgba(255, 255, 255, ${opacity})`,
-                borderBottom: `2px solid rgba(48, 48, 64, ${opacity})`,
+                backgroundColor: `hsl(from var(--base-white) h s l / ${opacity})`,
+                borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 id='logo'>Davi</h1>
+            <h1 className='font-bold text-5xl font-title text-black'>Davi</h1>
             <nav>
-                <ul className='menu'>
+                <ul className='flex gap-8'>
                     {linksList.map(link => (
                         <li key={link.id}>
                             <a href={link.url} target={link.target}>
