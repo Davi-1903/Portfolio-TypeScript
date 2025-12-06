@@ -70,6 +70,7 @@ export const projectList: Project[] = [
         technologies: [
             { name: 'React', icon: <IconBrandReact /> },
             { name: 'Flask', icon: <IconFlask /> },
+            { name: 'Tailwind', icon: <IconBrandTailwind /> },
             { name: 'MySQL', icon: <IconBrandMysql /> },
         ],
     },
