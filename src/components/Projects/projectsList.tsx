@@ -6,6 +6,7 @@ import {
     IconBrandJavascript,
     IconBrandMysql,
     IconBrandReact,
+    IconBrandTailwind,
     IconDeviceGamepad2,
     IconFlask,
     IconSquareNumber0,
@@ -22,6 +23,7 @@ export const projectList: Project[] = [
         technologies: [
             { name: 'React', icon: <IconBrandReact /> },
             { name: 'Flask', icon: <IconFlask /> },
+            { name: 'Tailwind', icon: <IconBrandTailwind /> },
             { name: 'MySQL', icon: <IconBrandMysql /> },
             { name: 'IA', icon: <IconBrain /> },
         ],
