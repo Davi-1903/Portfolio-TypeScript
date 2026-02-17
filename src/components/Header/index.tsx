@@ -6,7 +6,7 @@ const linksList: Link[] = [
     {
         id: 1,
         icon: (
-            <IconBrandGithub className='w-[32pt] h-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
+            <IconBrandGithub className='h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
         ),
         url: 'https://github.com/Davi-1903',
         target: '_blank',
@@ -14,34 +14,34 @@ const linksList: Link[] = [
     {
         id: 2,
         icon: (
-            <IconBrandInstagram className='w-[32pt] h-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
+            <IconBrandInstagram className='h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
         ),
         url: 'https://instagram.com/davifran11',
         target: '_blank',
     },
     {
         id: 3,
-        icon: <IconMail className='w-[32pt] h-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />,
+        icon: <IconMail className='h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />,
         url: 'mailto:franciscodavi327@gmail.com',
         target: '_self',
     },
 ];
 
 export default function Header() {
-    const [dropHeader, setDropHeader] = useState<boolean>(true);
-    const [opacity, setOpacity] = useState<number>(0);
+    const [dropHeader, setDropHeader] = useState(true);
+    const [opacity, setOpacity] = useState(0);
     const lastY = useRef<number | null>(null);
 
     useEffect(() => {
-        function handlerScroll(): void {
+        const handlerScroll = () => {
             const scrolled = window.scrollY;
             setDropHeader(lastY.current === null || lastY.current > scrolled);
             lastY.current = scrolled;
-        }
+        };
 
-        function handlerOpacity(): void {
+        const handlerOpacity = () => {
             setOpacity(Math.min(window.scrollY / window.innerHeight, 1));
-        }
+        };
 
         window.addEventListener('scroll', handlerScroll);
         window.addEventListener('scroll', handlerOpacity);
@@ -53,7 +53,7 @@ export default function Header() {
 
     return (
         <header
-            className={`h-header z-1 fixed w-full px-8 flex items-center justify-between transition-all duration-200 ${
+            className={`fixed z-1 flex h-header w-full items-center justify-between px-8 transition-all duration-200 ${
                 dropHeader ? 'top-0' : '-top-(--height-header)'
             }`}
             style={{
@@ -61,7 +61,7 @@ export default function Header() {
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 className='font-bold text-5xl font-title text-black'>Davi</h1>
+            <h1 className='font-title text-5xl font-bold text-black'>Davi</h1>
             <nav>
                 <ul className='flex gap-8'>
                     {linksList.map(link => (

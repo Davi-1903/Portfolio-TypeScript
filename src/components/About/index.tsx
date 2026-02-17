@@ -15,7 +15,7 @@ export default function About() {
                     }
                 });
             },
-            { threshold: 0.5 }
+            { threshold: 0.5 },
         );
 
         if (sectionRef.current) observer.observe(sectionRef.current);
@@ -25,19 +25,19 @@ export default function About() {
     return (
         <section
             ref={sectionRef}
-            className='min-h-screen bg-white p-12 flex items-center justify-center flex-wrap gap-12 md:p-24 shadow-about'
+            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-white p-12 shadow-about md:p-24'
         >
             <div
-                className={`w-sm bg-white p-4 border-2 border-black shadow-basic opacity-0 ${
+                className={`w-sm border-2 border-black bg-white p-4 opacity-0 shadow-basic ${
                     isEmerge ? 'animate-translate-left' : ''
                 }`}
             >
                 <img src={Me} alt='Me' />
             </div>
             <div className={`w-sm text-black opacity-0 ${isEmerge ? 'animate-translate-right' : ''}`}>
-                <h2 className='font-bold text-5xl font-primary'>Who am i?</h2>
-                <hr className='border border-black my-2' />
-                <p className='text-lg/normal font-secundary'>
+                <h2 className='font-primary text-5xl font-bold'>Who am i?</h2>
+                <hr className='my-2 border border-black' />
+                <p className='font-secundary text-lg/normal'>
                     My full name is <strong>Davi Francisco da Silva Fonseca</strong> and I'm 17 years old. I live in
                     Jucurutu, RN - Brazil, and I'm studing Computer Science for the Internet at <strong>IFRN</strong> -
                     Campus Caicó.

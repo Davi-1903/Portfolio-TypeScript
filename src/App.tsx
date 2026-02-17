@@ -1,8 +1,8 @@
-import Header from './components/Header/Header';
-import Welcome from './components/Welcome/Welcome';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header';
+import Welcome from './components/Welcome';
+import About from './components/About';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 export default function App() {
     return (

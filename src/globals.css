@@ -6,7 +6,7 @@
     --font-primary: 'Chivo Mono';
     --font-secundary: 'Roboto';
     --font-title: 'Parisienne';
-    --base-white: #FFFAFA;
+    --base-white: #fffafa;
     --base-black: #303040;
 }
 
@@ -30,6 +30,14 @@
     html {
         scroll-behavior: smooth;
     }
+
+    @supports (-webkit-touch-callout: none) {
+        input,
+        textarea,
+        select {
+            font-size: 16px;
+        }
+    }
 }
 
 @layer components {
@@ -38,13 +46,8 @@
     }
 }
 
-@utility bg-welcome {
-    background: url('/background.jpg') center bottom no-repeat;
-    background-size: cover;
-}
-
 @utility shadow-basic {
-    box-shadow: .5rem .5rem 0 var(--base-black);
+    box-shadow: 0.5rem 0.5rem 0 var(--base-black);
 }
 
 @utility shadow-about {

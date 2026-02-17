@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 export default function Welcome() {
-    const [scrolled, setScrolled] = useState<number>(0);
+    const [scrolled, setScrolled] = useState(0);
 
     useEffect(() => {
-        function handlerScroll(): void {
+        const handlerScroll = () => {
             setScrolled(window.scrollY / 2);
-        }
+        };
 
         window.addEventListener('scroll', handlerScroll);
         return () => window.removeEventListener('scroll', handlerScroll);
@@ -14,12 +14,12 @@ export default function Welcome() {
 
     return (
         <section
-            className='-z-1 relative h-screen bg-welcome grid place-items-center'
+            className='relative -z-1 grid h-screen place-items-center bg-[url(/background.jpg)] bg-cover bg-center bg-no-repeat'
             style={{
                 transform: `translateY(${scrolled}px)`,
             }}
         >
-            <h1 className='font-bold text-5xl font-primary text-black opacity-0 animate-welcome md:text-8xl'>
+            <h1 className='animate-welcome font-primary text-5xl font-bold text-black opacity-0 md:text-8xl'>
                 Hi! I'm Davi
             </h1>
         </section>
