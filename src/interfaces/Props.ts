@@ -13,3 +13,8 @@ export interface CardProjectProps {
 export interface SkillProps {
     technology: string;
 }
+
+export interface ContributorProps {
+    name: string;
+    url: string;
+}

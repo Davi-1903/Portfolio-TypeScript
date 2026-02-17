@@ -14,7 +14,7 @@ export default function Welcome() {
 
     return (
         <section
-            className='relative -z-1 grid h-screen place-items-center bg-[url(/background.jpg)] bg-cover bg-center bg-no-repeat'
+            className='relative -z-1 grid h-screen place-items-center bg-[url(/background.webp)] bg-cover bg-center bg-no-repeat'
             style={{
                 transform: `translateY(${scrolled}px)`,
             }}
