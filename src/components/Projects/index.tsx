@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { projectList } from './projectsList';
 import CardProject from '../CardProject';
+import clsx from 'clsx';
 
 export default function Projects() {
     const [isEmerge, setEmerge] = useState(false);
@@ -27,17 +28,19 @@ export default function Projects() {
         <section ref={sectionRef} className='flex min-h-screen flex-col gap-24 bg-white p-8 pt-0 md:p-24'>
             <div>
                 <h2
-                    className={`text-center font-primary text-4xl/normal font-bold text-black opacity-0 md:text-6xl/normal ${
-                        isEmerge ? 'animate-translate-up' : ''
-                    }`}
+                    className={clsx(
+                        'text-center font-primary text-4xl/normal font-bold text-black opacity-0 md:text-6xl/normal',
+                        isEmerge ? 'animate-translate-up' : '',
+                    )}
                 >
                     Projects
                 </h2>
             </div>
             <div
-                className={`grid flex-1 grid-cols-fit-72 gap-12 opacity-0 md:grid-cols-fit-96 ${
-                    isEmerge ? 'animate-translate-down' : ''
-                }`}
+                className={clsx(
+                    'grid flex-1 grid-cols-fit-72 gap-12 opacity-0 md:grid-cols-fit-96',
+                    isEmerge ? 'animate-translate-down' : '',
+                )}
             >
                 {projectList.map(project => (
                     <CardProject key={project.id} project={project} />

@@ -1,6 +1,7 @@
 import { IconBrandGithub, IconBrandInstagram, IconMail } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
 import type { Link } from '../../interfaces/Objects';
+import clsx from 'clsx';
 
 const linksList: Link[] = [
     {
@@ -53,9 +54,10 @@ export default function Header() {
 
     return (
         <header
-            className={`fixed z-1 flex h-header w-full items-center justify-between px-8 transition-all duration-200 ${
-                dropHeader ? 'top-0' : '-top-(--height-header)'
-            }`}
+            className={clsx(
+                'fixed z-1 flex h-header w-full items-center justify-between px-8 transition-all duration-200',
+                dropHeader ? 'top-0' : '-top-(--height-header)',
+            )}
             style={{
                 backgroundColor: `hsl(from var(--base-white) h s l / ${opacity})`,
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
