@@ -30,7 +30,7 @@ export default function Projects() {
                 <h2
                     className={clsx(
                         'text-center font-primary text-4xl/normal font-bold text-black opacity-0 md:text-6xl/normal',
-                        isEmerge ? 'animate-translate-up' : '',
+                        isEmerge && 'animate-translate-up',
                     )}
                 >
                     Projects
@@ -38,8 +38,8 @@ export default function Projects() {
             </div>
             <div
                 className={clsx(
-                    'grid flex-1 grid-cols-fit-72 gap-12 opacity-0 md:grid-cols-fit-96',
-                    isEmerge ? 'animate-translate-down' : '',
+                    'grid flex-1 grid-cols-fit-72 gap-12 opacity-0 lg:grid-cols-fit-96',
+                    isEmerge && 'animate-translate-down',
                 )}
             >
                 {projectList.map(project => (

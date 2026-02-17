@@ -41,7 +41,7 @@
 }
 
 @utility animate-welcome {
-    animation: animation-welcome 2s 1s forwards;
+    animation: animation-welcome 2s 500ms forwards;
 }
 
 @utility shadow-basic {

@@ -64,7 +64,7 @@ export default function About() {
                     Jucurutu, RN - Brazil, and I'm studing Computer Science for the Internet at <strong>IFRN</strong> -
                     Campus Caicó.
                 </p>
-                <h3 className='mt-2 font-primary text-3xl font-bold'>My skills</h3>
+                <h3 className='mt-4 font-primary text-3xl font-bold'>My skills</h3>
                 <hr className='my-2 border border-black' />
                 <ul className='flex flex-wrap gap-2'>
                     {skills.map((skill, idx) => (
