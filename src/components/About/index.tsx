@@ -1,10 +1,30 @@
 import { useEffect, useRef, useState } from 'react';
+import Skill from '../Skill';
 import Me from '/Me.jpg';
 import clsx from 'clsx';
 
 export default function About() {
     const [isEmerge, setEmerge] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
+    const skills = [
+        'Python',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'TypeScript',
+        'MySQL',
+        'SQLite',
+        'Markdown',
+        'Flask',
+        'React',
+        'Tailwind',
+        'Git',
+        'Github',
+        'Figma',
+        'VsCode',
+        'Vite',
+        'Docker',
+    ];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -44,6 +64,15 @@ export default function About() {
                     Jucurutu, RN - Brazil, and I'm studing Computer Science for the Internet at <strong>IFRN</strong> -
                     Campus Caicó.
                 </p>
+                <h3 className='mt-2 font-primary text-3xl font-bold'>My skills</h3>
+                <hr className='my-2 border border-black' />
+                <ul className='flex flex-wrap gap-2'>
+                    {skills.map((skill, idx) => (
+                        <li key={idx}>
+                            <Skill technology={skill} />
+                        </li>
+                    ))}
+                </ul>
             </div>
         </section>
     );

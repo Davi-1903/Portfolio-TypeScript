@@ -9,3 +9,7 @@ export interface SectionEmergeProps {
 export interface CardProjectProps {
     project: Project;
 }
+
+export interface SkillProps {
+    technology: string;
+}

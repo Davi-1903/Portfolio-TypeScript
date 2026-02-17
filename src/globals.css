@@ -32,6 +32,7 @@
     }
 
     @supports (-webkit-touch-callout: none) {
+
         input,
         textarea,
         select {
@@ -40,10 +41,8 @@
     }
 }
 
-@layer components {
-    .animate-welcome {
-        animation: animation-welcome 2s 1s forwards;
-    }
+@utility animate-welcome {
+    animation: animation-welcome 2s 1s forwards;
 }
 
 @utility shadow-basic {

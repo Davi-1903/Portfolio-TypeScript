@@ -1,16 +1,3 @@
-import {
-    IconBox,
-    IconBrain,
-    IconBrandCss3,
-    IconBrandHtml5,
-    IconBrandJavascript,
-    IconBrandMysql,
-    IconBrandReact,
-    IconBrandTailwind,
-    IconDeviceGamepad2,
-    IconFlask,
-    IconSquareNumber0,
-} from '@tabler/icons-react';
 import type { Project } from '../../interfaces/Objects';
 
 export const projectList: Project[] = [
@@ -20,13 +7,7 @@ export const projectList: Project[] = [
         description: 'Game developed with pygame for technological exhibition.',
         imageURL: '/projects/EduIA.png',
         projectURL: 'https://github.com/Davi-1903/EduIA',
-        technologies: [
-            { name: 'React', icon: <IconBrandReact /> },
-            { name: 'Flask', icon: <IconFlask /> },
-            { name: 'Tailwind', icon: <IconBrandTailwind /> },
-            { name: 'MySQL', icon: <IconBrandMysql /> },
-            { name: 'IA', icon: <IconBrain /> },
-        ],
+        technologies: ['React', 'Flask', 'Tailwind', 'MySQL', 'IA'],
     },
     {
         id: 2,
@@ -34,10 +15,7 @@ export const projectList: Project[] = [
         description: 'Game developed with pygame for technological exhibition.',
         imageURL: '/projects/Expotec-2024.png',
         projectURL: 'https://github.com/Davi-1903/Expotec-2024',
-        technologies: [
-            { name: 'PyGame', icon: <IconDeviceGamepad2 /> },
-            { name: 'PyTMX', icon: <IconBox /> },
-        ],
+        technologies: ['PyGame', 'PyTMX'],
     },
     {
         id: 3,
@@ -45,10 +23,7 @@ export const projectList: Project[] = [
         description: 'Secund project made to study neural networks',
         imageURL: '/projects/Dino-IA.png',
         projectURL: 'https://github.com/Davi-1903/Dino-IA',
-        technologies: [
-            { name: 'PyGame', icon: <IconDeviceGamepad2 /> },
-            { name: 'NumPy', icon: <IconSquareNumber0 /> },
-        ],
+        technologies: ['PyGame', 'NumPy'],
     },
     {
         id: 4,
@@ -56,10 +31,7 @@ export const projectList: Project[] = [
         description: 'First project mate to study neural networks',
         imageURL: '/projects/Pong-IA.png',
         projectURL: 'https://github.com/Davi-1903/Pong-IA',
-        technologies: [
-            { name: 'PyGame', icon: <IconDeviceGamepad2 /> },
-            { name: 'NumPy', icon: <IconSquareNumber0 /> },
-        ],
+        technologies: ['PyGame', 'NumPy'],
     },
     {
         id: 5,
@@ -67,12 +39,7 @@ export const projectList: Project[] = [
         description: 'Simple application to learn how to integrate Flask and React',
         imageURL: '/projects/CubeTime.png',
         projectURL: 'https://github.com/Davi-1903/Personagens',
-        technologies: [
-            { name: 'React', icon: <IconBrandReact /> },
-            { name: 'Flask', icon: <IconFlask /> },
-            { name: 'Tailwind', icon: <IconBrandTailwind /> },
-            { name: 'MySQL', icon: <IconBrandMysql /> },
-        ],
+        technologies: ['React', 'Flask', 'Tailwind', 'MySQL'],
     },
     {
         id: 6,
@@ -80,10 +47,6 @@ export const projectList: Project[] = [
         description: 'Web design project. Tourism blog.',
         imageURL: '/projects/GoWay.png',
         projectURL: 'https://github.com/Davi-1903/GoWay',
-        technologies: [
-            { name: 'HTML', icon: <IconBrandHtml5 /> },
-            { name: 'CSS', icon: <IconBrandCss3 /> },
-            { name: 'JavaScript', icon: <IconBrandJavascript /> },
-        ],
+        technologies: ['HTML', 'CSS', 'JavaScript'],
     },
 ];

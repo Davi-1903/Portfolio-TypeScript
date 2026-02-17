@@ -1,4 +1,5 @@
 import type { CardProjectProps } from '../../interfaces/Props';
+import Skill from '../Skill';
 
 export default function CardProject({ project }: CardProjectProps) {
     return (
@@ -9,12 +10,8 @@ export default function CardProject({ project }: CardProjectProps) {
                 <p className='font-secundary text-2xl text-black'>{project.description}</p>
                 <ul className='flex flex-1 flex-wrap content-end gap-2'>
                     {project.technologies.map((technology, idx) => (
-                        <li
-                            key={idx}
-                            className='flex gap-2 rounded-lg border-2 border-black px-2 py-1 font-primary text-black'
-                        >
-                            {technology.icon}
-                            <span>{technology.name}</span>
+                        <li key={idx}>
+                            <Skill technology={technology} />
                         </li>
                     ))}
                 </ul>
