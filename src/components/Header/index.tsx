@@ -1,28 +1,25 @@
-import { IconBrandGithub, IconBrandInstagram, IconMail } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandInstagram, IconMail, IconMoon, IconSun } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
-import type { Link } from '../../interfaces/Objects';
+import type { Link, Theme } from '../../interfaces/Objects';
+import { loadTheme } from '../../utils/theme';
 import clsx from 'clsx';
 
 const linksList: Link[] = [
     {
         id: 1,
-        icon: (
-            <IconBrandGithub className='h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
-        ),
+        icon: <IconBrandGithub className='icon' />,
         url: 'https://github.com/Davi-1903',
         target: '_blank',
     },
     {
         id: 2,
-        icon: (
-            <IconBrandInstagram className='h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />
-        ),
+        icon: <IconBrandInstagram className='icon' />,
         url: 'https://instagram.com/davifran11',
         target: '_blank',
     },
     {
         id: 3,
-        icon: <IconMail className='h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2' />,
+        icon: <IconMail className='icon' />,
         url: 'mailto:franciscodavi327@gmail.com',
         target: '_self',
     },
@@ -31,7 +28,22 @@ const linksList: Link[] = [
 export default function Header() {
     const [dropHeader, setDropHeader] = useState(true);
     const [opacity, setOpacity] = useState(0);
+    const [theme, setTheme] = useState<Theme>(loadTheme);
     const lastY = useRef<number | null>(null);
+
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    };
+
+    useEffect(() => {
+        const root = document.documentElement;
+        if (theme === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     useEffect(() => {
         const handlerScroll = () => {
@@ -73,6 +85,15 @@ export default function Header() {
                             </a>
                         </li>
                     ))}
+                    <li key='toggle-theme'>
+                        <button className='cursor-pointer' onClick={toggleTheme}>
+                            {theme === 'dark' ? (
+                                <IconMoon className='icon hover:translate-none' />
+                            ) : (
+                                <IconSun className='icon hover:translate-none' />
+                            )}
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </header>

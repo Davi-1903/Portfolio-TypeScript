@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 
+export type Theme = 'light' | 'dark';
+
 export interface Project {
     id: number;
     name: string;

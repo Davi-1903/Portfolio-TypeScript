@@ -10,6 +10,11 @@
     --base-black: #303040;
 }
 
+.dark {
+    --base-white: #151519;
+    --base-black: #dfdfef;
+}
+
 @theme inline {
     --height-header: 100px;
     --font-primary: var(--font-primary);
@@ -38,6 +43,12 @@
         select {
             font-size: 16px;
         }
+    }
+}
+
+@layer components {
+    .icon {
+        @apply h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2;
     }
 }
 
@@ -132,3 +143,5 @@
         opacity: 1;
     }
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
