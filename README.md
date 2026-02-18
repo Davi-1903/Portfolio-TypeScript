@@ -1,3 +1,3 @@
-# Portfolio + TypeScript
+# Portfolio
 
-Portfólio feito com `React` + `TypeScript`
+Portfólio feito com `React`

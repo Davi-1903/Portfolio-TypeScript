@@ -60,9 +60,9 @@ export default function About() {
                 <h2 className='font-primary text-5xl font-bold'>Who am i?</h2>
                 <hr className='my-2 border border-black' />
                 <p className='font-secundary text-lg/normal'>
-                    My full name is <strong>Davi Francisco da Silva Fonseca</strong> and I'm 17 years old. I live in
-                    Jucurutu, RN - Brazil, and I'm studing Computer Science for the Internet at <strong>IFRN</strong> -
-                    Campus Caicó.
+                    My full name is <strong>Davi Francisco da Silva Fonseca</strong> and I am 17 years old. I live in
+                    Jucurutu, RN - Brazil and I am in my fourth year studying Computer Science for the Internet at{' '}
+                    <strong>IFRN</strong> - Campus Caicó.
                 </p>
                 <h3 className='mt-4 font-primary text-3xl font-bold'>My skills</h3>
                 <hr className='my-2 border border-black' />
