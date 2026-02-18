@@ -32,6 +32,7 @@
     }
 
     @supports (-webkit-touch-callout: none) {
+
         input,
         textarea,
         select {
@@ -52,12 +53,8 @@
     box-shadow: 0 0 3rem 3rem var(--base-white);
 }
 
-@utility grid-cols-fit-96 {
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-}
-
-@utility grid-cols-fit-72 {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+@utility grid-cols-fit-84 {
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
 }
 
 @utility animate-translate-left {

@@ -38,12 +38,12 @@ export default function Projects() {
             </div>
             <div
                 className={clsx(
-                    'grid flex-1 grid-cols-fit-72 gap-12 opacity-0 lg:grid-cols-fit-96',
+                    'grid flex-1 grid-cols-fit-84 gap-8 opacity-0 lg:gap-12',
                     isEmerge && 'animate-translate-down',
                 )}
             >
                 {projectList.map(project => (
-                    <CardProject key={project.id} project={project} />
+                    <CardProject key={project.id} {...project} />
                 ))}
             </div>
         </section>

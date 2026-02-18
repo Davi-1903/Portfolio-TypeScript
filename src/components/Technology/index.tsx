@@ -24,7 +24,7 @@ import {
 } from '@tabler/icons-react';
 import type { SkillProps } from '../../interfaces/Props';
 
-export default function Skill({ technology }: SkillProps) {
+export default function Technology({ technology }: SkillProps) {
     const icons = {
         python: <IconBrandPython />,
         pytmx: <IconBox />,

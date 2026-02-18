@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Skill from '../Skill';
+import Technology from '../Technology';
 import Me from '/Me.jpg';
 import clsx from 'clsx';
 
@@ -51,12 +51,12 @@ export default function About() {
             <div
                 className={clsx(
                     'w-sm border-2 border-black bg-white p-4 opacity-0 shadow-basic',
-                    isEmerge ? 'animate-translate-left' : '',
+                    isEmerge && 'animate-translate-left',
                 )}
             >
                 <img src={Me} alt='Me' />
             </div>
-            <div className={clsx('w-sm text-black opacity-0', isEmerge ? 'animate-translate-right' : '')}>
+            <div className={clsx('w-sm text-black opacity-0', isEmerge && 'animate-translate-right')}>
                 <h2 className='font-primary text-5xl font-bold'>Who am i?</h2>
                 <hr className='my-2 border border-black' />
                 <p className='font-secundary text-lg/normal'>
@@ -69,7 +69,7 @@ export default function About() {
                 <ul className='flex flex-wrap gap-2'>
                     {skills.map((skill, idx) => (
                         <li key={idx}>
-                            <Skill technology={skill} />
+                            <Technology technology={skill} />
                         </li>
                     ))}
                 </ul>
