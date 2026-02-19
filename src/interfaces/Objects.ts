@@ -9,7 +9,7 @@ export interface Project {
     imageURL: string;
     projectURL: string;
     technologies: string[];
-    contributors?: { id: number; name: string; url: string }[];
+    team?: { id: number; name: string; url: string }[];
 }
 
 export interface Link {

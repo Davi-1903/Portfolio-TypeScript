@@ -8,7 +8,7 @@ export const projectList: Project[] = [
         imageURL: '/projects/EduIA.webp',
         projectURL: 'https://github.com/Davi-1903/EduIA',
         technologies: ['React', 'Flask', 'Tailwind', 'MySQL', 'IA'],
-        contributors: [
+        team: [
             { id: 1, name: 'Ana Cecilya', url: 'https://github.com/cecilya1' },
             { id: 2, name: 'Ana Clara', url: 'https://github.com/anaclaraa1' },
             { id: 3, name: 'Maria das Graças', url: 'https://github.com/mgdantas1' },
@@ -22,7 +22,7 @@ export const projectList: Project[] = [
         imageURL: '/projects/Expotec-2024.webp',
         projectURL: 'https://github.com/Davi-1903/Expotec-2024',
         technologies: ['PyGame', 'PyTMX'],
-        contributors: [
+        team: [
             { id: 1, name: 'Arthur Guilherme', url: 'https://github.com/ArthurGui004' },
             { id: 2, name: 'Pedro Lucas', url: 'https://github.com/Pepeulu' },
             { id: 3, name: 'Guilherme Medeiros', url: 'https://github.com/GuiMeCa162' },
@@ -35,7 +35,7 @@ export const projectList: Project[] = [
         imageURL: '/projects/GoWay.webp',
         projectURL: 'https://github.com/Davi-1903/GoWay',
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        contributors: [
+        team: [
             { id: 1, name: 'Ana Cecilya', url: 'https://github.com/cecilya1' },
             { id: 2, name: 'Ana Clara', url: 'https://github.com/anaclaraa1' },
             { id: 3, name: 'Maria das Graças', url: 'https://github.com/mgdantas1' },
@@ -60,9 +60,25 @@ export const projectList: Project[] = [
     {
         id: 6,
         name: 'CubeTime',
-        description: 'Simple application to learn how to integrate Flask and React.',
+        description: 'Simple application to learn how to integrate Flask and React',
         imageURL: '/projects/CubeTime.webp',
         projectURL: 'https://github.com/Davi-1903/Personagens',
         technologies: ['React', 'Flask', 'Tailwind', 'MySQL'],
+    },
+    {
+        id: 7,
+        name: 'ToDoList',
+        description: 'A simple to-do list with React that runs only in the browser',
+        imageURL: '/projects/ToDoList.webp',
+        projectURL: 'https://github.com/Davi-1903/ToDoList',
+        technologies: ['React', 'Tailwind'],
+    },
+    {
+        id: 8,
+        name: 'ChatBot',
+        description: 'Simple ChatBot with Flask and React',
+        imageURL: '/projects/ChatBot.webp',
+        projectURL: 'https://github.com/Davi-1903/ChatBot',
+        technologies: ['React', 'Flask'],
     },
 ];

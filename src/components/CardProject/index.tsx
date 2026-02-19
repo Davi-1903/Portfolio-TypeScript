@@ -1,12 +1,61 @@
+import { useEffect, useRef, useState } from 'react';
 import type { Project } from '../../interfaces/Objects';
+import Technology from '../Technology';
+import Contributor from '../Contributor';
+import clsx from 'clsx';
 
-export default function CardProject({ name, description, projectURL, imageURL }: Project) {
+export default function CardProject({ name, description, projectURL, imageURL, team, technologies }: Project) {
+    const [isEmerge, setEmerge] = useState(false);
+    const cardRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            entries =>
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setEmerge(true);
+                        observer.unobserve(entry.target);
+                    }
+                }),
+            { threshold: 0.25 },
+        );
+
+        if (cardRef.current) observer.observe(cardRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <a href={projectURL} target='_blank'>
-            <article className='flex h-full flex-col gap-4 border-2 border-black bg-white p-4 transition-all duration-125 hover:-translate-2 hover:shadow-basic'>
+        <a href={projectURL}>
+            <article
+                ref={cardRef}
+                className={clsx(
+                    'flex break-inside-avoid flex-col gap-4 border-2 border-black bg-white p-4 opacity-0 transition-all duration-125 hover:-translate-2 hover:shadow-basic',
+                    isEmerge && 'animate-translate-down',
+                )}
+            >
                 <img src={imageURL} alt={`Project ${name}`} className='border-2 border-black' />
                 <h3 className='font-primary text-4xl font-bold text-black'>{name}</h3>
                 <p className='font-secundary text-2xl text-black'>{description}</p>
+                {team && (
+                    <>
+                        <h4 className='font-primary text-2xl font-bold text-black'>Team</h4>
+                        <ul className='flex flex-wrap gap-2'>
+                            {team.map(contributor => (
+                                <li key={contributor.id}>
+                                    <Contributor {...contributor} />
+                                </li>
+                            ))}
+                        </ul>
+                    </>
+                )}
+                <h4 className='font-primary text-2xl font-bold text-black'>Technologies</h4>
+                <ul className='flex flex-wrap gap-2'>
+                    {technologies.map((technology, idx) => (
+                        <li key={idx}>
+                            <Technology technology={technology} />
+                        </li>
+                    ))}
+                </ul>
             </article>
         </a>
     );

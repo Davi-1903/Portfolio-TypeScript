@@ -36,16 +36,13 @@ export default function Projects() {
                     Projects
                 </h2>
             </div>
-            <div
-                className={clsx(
-                    'grid flex-1 grid-cols-fit-84 gap-8 opacity-0 lg:gap-12',
-                    isEmerge && 'animate-translate-down',
-                )}
-            >
+            <ul className='flex-1 columns-sm gap-8 sm:columns-2 md:gap-12 lg:columns-sm'>
                 {projectList.map(project => (
-                    <CardProject key={project.id} {...project} />
+                    <li key={project.id} className='not-last:mb-12'>
+                        <CardProject {...project} />
+                    </li>
                 ))}
-            </div>
+            </ul>
         </section>
     );
 }

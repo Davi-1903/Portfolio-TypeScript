@@ -75,7 +75,7 @@ export default function Header() {
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 className='font-title text-5xl font-bold text-black'>Davi</h1>
+            <h1 className='font-title text-5xl font-bold text-black'>Portfólio</h1>
             <nav>
                 <ul className='flex gap-8'>
                     {linksList.map(link => (
