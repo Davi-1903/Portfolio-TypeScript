@@ -12,16 +12,23 @@
 
 .dark {
     --base-white: #151519;
-    --base-black: #ffffff;
+    --base-black: #eeeeff;
 }
 
 @theme inline {
     --height-header: 100px;
+
     --font-primary: var(--font-primary);
     --font-secundary: var(--font-secundary);
     --font-title: var(--font-title);
-    --color-white: var(--base-white);
-    --color-black: var(--base-black);
+
+    --color-white-50: hsl(from var(--base-white) h s calc(l - 5));
+    --color-white-100: var(--base-white);
+    --color-white-200: hsl(from var(--base-white) h s calc(l + 5));
+
+    --color-black-50: hsl(from var(--base-black) h s calc(l - 5));
+    --color-black-100: var(--base-black);
+    --color-black-200: hsl(from var(--base-black) h s calc(l + 5));
 }
 
 @layer base {
@@ -47,7 +54,7 @@
 
 @layer components {
     .icon {
-        @apply h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2;
+        @apply h-[32pt] w-[32pt] stroke-black-100 transition-all duration-125 hover:-translate-y-2;
     }
 }
 

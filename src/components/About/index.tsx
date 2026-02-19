@@ -46,26 +46,26 @@ export default function About() {
     return (
         <section
             ref={sectionRef}
-            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-white p-12 shadow-about md:p-24'
+            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-white-100 p-12 shadow-about md:p-24'
         >
             <div
                 className={clsx(
-                    'w-sm border-2 border-black bg-white p-4 opacity-0 shadow-basic',
+                    'w-sm border-2 border-black-100 bg-white-100 p-4 opacity-0 not-dark:shadow-basic',
                     isEmerge && 'animate-translate-left',
                 )}
             >
                 <img src={Me} alt='Me' />
             </div>
-            <div className={clsx('w-sm text-black opacity-0', isEmerge && 'animate-translate-right')}>
+            <div className={clsx('w-sm text-black-100 opacity-0', isEmerge && 'animate-translate-right')}>
                 <h2 className='font-primary text-5xl font-bold'>Who am i?</h2>
-                <hr className='my-2 border border-black' />
+                <hr className='my-2 border border-black-100' />
                 <p className='font-secundary text-lg/normal'>
                     My full name is <strong>Davi Francisco da Silva Fonseca</strong> and I am 17 years old. I live in
                     Jucurutu, RN - Brazil and I am in my fourth year studying Computer Science for the Internet at{' '}
                     <strong>IFRN</strong> - Campus Caicó.
                 </p>
                 <h3 className='mt-4 font-primary text-3xl font-bold'>My skills</h3>
-                <hr className='my-2 border border-black' />
+                <hr className='my-2 border border-black-100' />
                 <ul className='flex flex-wrap gap-2'>
                     {skills.map((skill, idx) => (
                         <li key={idx}>

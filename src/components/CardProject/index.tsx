@@ -29,16 +29,16 @@ export default function CardProject({ name, description, projectURL, imageURL, t
             <article
                 ref={cardRef}
                 className={clsx(
-                    'flex break-inside-avoid flex-col gap-4 border-2 border-black bg-white p-4 opacity-0 transition-all duration-125 hover:-translate-2 hover:shadow-basic',
+                    'flex break-inside-avoid flex-col gap-4 bg-white-100 p-4 opacity-0 transition-all duration-125 not-dark:border-2 not-dark:border-black-100 hover:not-dark:-translate-2 hover:not-dark:shadow-basic dark:bg-white-200 hover:dark:-translate-y-2',
                     isEmerge && 'animate-translate-down',
                 )}
             >
-                <img src={imageURL} alt={`Project ${name}`} className='border-2 border-black' />
-                <h3 className='font-primary text-4xl font-bold text-black'>{name}</h3>
-                <p className='font-secundary text-2xl text-black'>{description}</p>
+                <img src={imageURL} alt={`Project ${name}`} className='border-2 border-black-100' />
+                <h3 className='font-primary text-4xl font-bold text-black-100'>{name}</h3>
+                <p className='font-secundary text-2xl text-black-100'>{description}</p>
                 {team && (
                     <>
-                        <h4 className='font-primary text-2xl font-bold text-black'>Team</h4>
+                        <h4 className='font-primary text-2xl font-bold text-black-100'>Team</h4>
                         <ul className='flex flex-wrap gap-2'>
                             {team.map(contributor => (
                                 <li key={contributor.id}>
@@ -48,7 +48,7 @@ export default function CardProject({ name, description, projectURL, imageURL, t
                         </ul>
                     </>
                 )}
-                <h4 className='font-primary text-2xl font-bold text-black'>Technologies</h4>
+                <h4 className='font-primary text-2xl font-bold text-black-100'>Technologies</h4>
                 <ul className='flex flex-wrap gap-2'>
                     {technologies.map((technology, idx) => (
                         <li key={idx}>
