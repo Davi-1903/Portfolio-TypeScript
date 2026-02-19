@@ -14,6 +14,7 @@ export interface Project {
 
 export interface Link {
     id: number;
+    name: string;
     icon: ReactNode;
     url: string;
     target: string;

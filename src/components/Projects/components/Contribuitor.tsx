@@ -1,4 +1,4 @@
-import type { ContributorProps } from '../../interfaces/Props';
+import type { ContributorProps } from '../../../interfaces/Props';
 
 export default function Contributor({ name, url }: ContributorProps) {
     return (

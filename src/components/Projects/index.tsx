@@ -1,24 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import { projectList } from './projectsList';
-import CardProject from '../CardProject';
 import clsx from 'clsx';
+import CardProject from './components/CardProject';
 
 export default function Projects() {
     const [isEmerge, setEmerge] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setEmerge(true);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.2 },
-        );
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setEmerge(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
 
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();

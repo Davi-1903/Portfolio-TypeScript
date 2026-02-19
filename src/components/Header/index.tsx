@@ -7,18 +7,21 @@ import clsx from 'clsx';
 const linksList: Link[] = [
     {
         id: 1,
+        name: 'Github',
         icon: <IconBrandGithub className='icon' />,
         url: 'https://github.com/Davi-1903',
         target: '_blank',
     },
     {
         id: 2,
+        name: 'Instagram',
         icon: <IconBrandInstagram className='icon' />,
         url: 'https://instagram.com/davifran11',
         target: '_blank',
     },
     {
         id: 3,
+        name: 'Email',
         icon: <IconMail className='icon' />,
         url: 'mailto:franciscodavi327@gmail.com',
         target: '_self',
@@ -56,6 +59,7 @@ export default function Header() {
             setOpacity(Math.min(window.scrollY / window.innerHeight, 1));
         };
 
+        handlerOpacity();
         window.addEventListener('scroll', handlerScroll);
         window.addEventListener('scroll', handlerOpacity);
         return () => {
@@ -67,15 +71,15 @@ export default function Header() {
     return (
         <header
             className={clsx(
-                'fixed z-1 flex h-header w-full items-center justify-between px-8 transition-all duration-200',
-                dropHeader ? 'top-0' : '-top-(--height-header)',
+                'h-header fixed top-0 z-1 flex w-full items-center justify-between p-4 transition-all duration-200 md:p-8',
+                dropHeader ? 'translate-none' : '-translate-y-full',
             )}
             style={{
                 backgroundColor: `hsl(from var(--base-white) h s l / ${opacity})`,
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 className='font-title text-5xl font-bold text-black-100'>Portfólio</h1>
+            <h1 className='font-title text-3xl font-bold text-black-100 md:text-5xl'>Portfólio</h1>
             <nav>
                 <ul className='flex gap-8'>
                     {linksList.map(link => (
