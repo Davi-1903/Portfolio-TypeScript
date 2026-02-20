@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
+import clsx from 'clsx';
 
 export default function Welcome() {
     const [isEmerge, setEmerge] = useState(false);

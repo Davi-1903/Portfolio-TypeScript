@@ -1,6 +1,5 @@
 import {
     IconBook,
-    IconBox,
     IconBrain,
     IconBrandCss3,
     IconBrandDocker,
@@ -27,7 +26,6 @@ import type { SkillProps } from '../../interfaces/Props';
 export default function Technology({ technology }: SkillProps) {
     const icons = {
         python: <IconBrandPython className='stroke-blue-600' />,
-        pytmx: <IconBox className='stroke-green-600' />,
         html: <IconBrandHtml5 className='stroke-orange-600' />,
         css: <IconBrandCss3 className='stroke-blue-600' />,
         javascript: <IconBrandJavascript className='stroke-yellow-600' />,

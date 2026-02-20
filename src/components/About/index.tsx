@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Technology from '../Technology';
-import Me from '/Me.jpg';
 import clsx from 'clsx';
+import Me from '/Me.jpg';
 
 export default function About() {
     const [isEmerge, setEmerge] = useState(false);

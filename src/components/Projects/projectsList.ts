@@ -65,8 +65,8 @@ export const projectList: Project[] = [
         name: 'CubeTime',
         description: 'Simple application to learn how to integrate Flask and React',
         imageURL: '/projects/CubeTime.webp',
-        projectURL: 'https://github.com/Davi-1903/Personagens',
-        technologies: ['React', 'Flask', 'Tailwind', 'MySQL'],
+        projectURL: 'https://github.com/Davi-1903/CubeTime',
+        technologies: ['React', 'Flask', 'Tailwind', 'MySQL', 'Docker'],
     },
     {
         id: 8,
@@ -74,7 +74,7 @@ export const projectList: Project[] = [
         description: 'Game developed with pygame for technological exhibition.',
         imageURL: '/projects/Expotec-2024.webp',
         projectURL: 'https://github.com/Davi-1903/Expotec-2024',
-        technologies: ['PyGame', 'PyTMX'],
+        technologies: ['PyGame'],
         team: [
             { id: 1, name: 'Arthur Guilherme', url: 'https://github.com/ArthurGui004' },
             { id: 2, name: 'Pedro Lucas', url: 'https://github.com/Pepeulu' },

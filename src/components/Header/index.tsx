@@ -71,7 +71,7 @@ export default function Header() {
     return (
         <header
             className={clsx(
-                'h-header fixed top-0 z-1 flex w-full items-center justify-between p-4 transition-all duration-200 md:p-8',
+                'h-header fixed top-0 z-1 flex w-full animate-translate-up items-center justify-between p-4 transition-all duration-200 md:p-8',
                 dropHeader ? 'translate-none' : '-translate-y-full',
             )}
             style={{
