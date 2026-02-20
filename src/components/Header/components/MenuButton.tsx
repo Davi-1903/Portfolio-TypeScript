@@ -10,7 +10,11 @@ export default function MenuButton() {
     };
 
     return (
-        <button className='relative z-3 block aspect-square h-8 cursor-pointer sm:hidden' onClick={toggleMenu}>
+        <button
+            className='relative z-3 block aspect-square h-8 cursor-pointer sm:hidden'
+            onClick={toggleMenu}
+            aria-label='button menu'
+        >
             <div
                 className={clsx(
                     'absolute h-1/10 w-4/5 rounded-full bg-black-100 transition-all duration-500',

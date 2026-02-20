@@ -33,7 +33,7 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
                 isEmerge && 'animate-translate-down',
             )}
         >
-            <img src={imageURL} alt={`Project ${name}`} className='border-2 border-black-100' />
+            <img src={imageURL} alt={`Project ${name}`} className='border-2 border-black-100' loading='lazy' />
             <h3 className='font-primary text-4xl font-bold text-black-100'>{name}</h3>
             <p className='font-secundary text-2xl text-black-100 dark:text-black-50'>{description}</p>
             {team && (
