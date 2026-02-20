@@ -54,16 +54,6 @@
     .icon {
         @apply h-[32pt] w-[32pt] stroke-black-100 transition-all duration-125 hover:-translate-y-2;
     }
-
-    .button-primary {
-        @apply relative flex w-full cursor-pointer items-center justify-center gap-2 border-2 border-black-100 bg-black-100 px-4 py-2 font-primary text-lg text-white-100 transition-all duration-250 md:justify-start;
-
-        &:hover {
-            box-shadow:
-                0 0 0 0.25rem var(--color-white-100),
-                0 0 0 0.5rem var(--color-black-100);
-        }
-    }
 }
 
 @utility animate-welcome {

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Project } from '../../../interfaces/Objects';
 import Technology from '../../Technology';
 import Contributor from './Contribuitor';
-import { IconArrowRight } from '@tabler/icons-react';
+import { IconArrowUpRight } from '@tabler/icons-react';
 import clsx from 'clsx';
 
 export default function CardProject({ name, description, projectURL, imageURL, team, technologies }: Project) {
@@ -56,10 +56,14 @@ export default function CardProject({ name, description, projectURL, imageURL, t
                     </li>
                 ))}
             </ul>
-            <a href={projectURL} target='_blank' className='self-end not-md:w-full'>
-                <button className='button-primary'>
-                    <span>View on Github</span>
-                    <IconArrowRight />
+            <a href={projectURL} target='_blank'>
+                <button className='group relative my-2 cursor-pointer self-start overflow-x-hidden border-2 border-black-100 bg-black-100 px-4 py-2 font-primary text-lg font-semibold text-white-100 transition-all duration-250 hover:pr-14 hover:text-black-100'>
+                    <div className='absolute top-0 left-0 h-full w-0 bg-white-100 transition-all duration-250 group-hover:w-full'></div>
+                    <span className='relative'>View on Github</span>
+                    <IconArrowUpRight
+                        size={32}
+                        className='absolute top-1/2 right-0 translate-x-full -translate-y-1/2 transition-all duration-250 group-hover:right-4 group-hover:translate-x-0'
+                    />
                 </button>
             </a>
         </article>
