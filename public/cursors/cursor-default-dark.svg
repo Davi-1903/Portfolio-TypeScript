@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6.5000005mm"
+   height="8.3933439mm"
+   viewBox="0 0 6.5000005 8.3933439"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-25.5,-23.606656)">
+    <g
+       id="rect1"
+       style="opacity:1;stroke:#303040;stroke-width:3.40708;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       transform="matrix(0.34785742,-0.20083558,0.20083558,0.34785742,18.741437,24.827403)">
+      <path
+         style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#fafaff;fill-opacity:1;stroke:none;stroke-width:3.40708;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         d="M 15.209381,3.3267699 7.4234314,26.682995 a 1.2501689,1.2501689 45.004292 0 0 1.5811913,1.581428 l 6.7199863,-2.239032 c 0.178989,-0.05966 0.371793,-0.05966 0.550782,0 l 6.719986,2.239032 a 1.2501689,1.2501689 134.99571 0 0 1.581191,-1.581428 L 16.790619,3.3267699 a 0.83339125,0.83339125 4.5877407e-7 0 0 -1.581238,0 z M 16,14.419922 l 2.634766,7.902344 -1.013672,-0.337891 c -1.052613,-0.350871 -2.189575,-0.350871 -3.242188,0 l -1.013672,0.337891 z"
+         id="path3"
+         transform="matrix(0.80000003,0,0,0.80000003,3.5354577,3.8195411)" />
+      <path
+         style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;fill:#303040;fill-opacity:1;stroke:#fafaff;stroke-width:0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4.6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+         d="m 16,7.6886452 6,17.9999998 -5.051317,-1.683772 a 3,3 0 0 0 -1.897366,0 L 10,25.688645 Z"
+         id="path4"
+         transform="matrix(0.80000003,0,0,0.80000003,3.5354577,3.8195411)" />
+    </g>
+  </g>
+</svg>

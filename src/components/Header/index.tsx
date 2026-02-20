@@ -84,7 +84,7 @@ export default function Header() {
                 <ul className='flex gap-8'>
                     {linksList.map(link => (
                         <li key={link.id}>
-                            <a href={link.url} target={link.target}>
+                            <a href={link.url} target={link.target} className='cursor-pointer'>
                                 {link.icon}
                             </a>
                         </li>

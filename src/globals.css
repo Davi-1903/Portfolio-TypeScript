@@ -8,11 +8,15 @@
     --font-title: 'Parisienne';
     --base-white: #fafaff;
     --base-black: #303040;
+    --cursor-default: url('/cursors/cursor-default-light.svg'), auto;
+    --cursor-pointer: url('/cursors/cursor-pointer-light.svg'), auto;
 }
 
 .dark {
     --base-white: #151519;
     --base-black: #eeeeff;
+    --cursor-default: url('/cursors/cursor-default-dark.svg'), auto;
+    --cursor-pointer: url('/cursors/cursor-pointer-dark.svg'), auto;
 }
 
 @theme inline {
@@ -27,6 +31,8 @@
     --color-black-50: hsl(from var(--base-black) h s calc(l - 5));
     --color-black-100: var(--base-black);
     --color-black-200: hsl(from var(--base-black) h s calc(l + 5));
+
+    --cursor-pointer: var(--cursor-pointer);
 }
 
 @layer base {
@@ -39,6 +45,7 @@
 
     html {
         scroll-behavior: smooth;
+        cursor: var(--cursor-default);
     }
 
     @supports (-webkit-touch-callout: none) {

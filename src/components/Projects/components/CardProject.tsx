@@ -56,8 +56,8 @@ export default function CardProject({ name, description, projectURL, imageURL, t
                     </li>
                 ))}
             </ul>
-            <a href={projectURL} target='_blank'>
-                <button className='group relative my-2 cursor-pointer self-start overflow-x-hidden border-2 border-black-100 bg-black-100 px-4 py-2 font-primary text-lg font-semibold text-white-100 transition-all duration-250 hover:pr-14 hover:text-black-100'>
+            <a href={projectURL} target='_blank' className='mt-2 w-fit'>
+                <button className='group relative cursor-pointer self-start overflow-x-hidden border-2 border-black-100 bg-black-100 px-4 py-2 font-primary text-lg font-semibold text-white-100 transition-all duration-250 hover:pr-14 hover:text-black-100'>
                     <div className='absolute top-0 left-0 h-full w-0 bg-white-100 transition-all duration-250 group-hover:w-full'></div>
                     <span className='relative'>View on Github</span>
                     <IconArrowUpRight
