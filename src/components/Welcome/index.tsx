@@ -33,7 +33,7 @@ export default function Welcome() {
     return (
         <section
             ref={welcomeRef}
-            className='relative -z-1 grid h-screen place-items-center bg-[url(/background-light.webp)] bg-cover bg-center bg-no-repeat dark:bg-[url(/background-dark.webp)]'
+            className='relative -z-1 grid h-screen place-items-center bg-[url(/background-light.webp)] bg-cover bg-center bg-no-repeat select-none dark:bg-[url(/background-dark.webp)]'
             style={{
                 transform: `translateY(${scrolled}px)`,
             }}

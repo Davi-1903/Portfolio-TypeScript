@@ -1,8 +1,8 @@
 import { IconBrandGithub, IconBrandInstagram, IconMail, IconMoon, IconSun } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
-import type { Link, Theme } from '../../interfaces/Objects';
-import { loadTheme } from '../../utils/theme';
+import type { Link } from '../../interfaces/Objects';
 import clsx from 'clsx';
+import { useTheme } from '../../context/themeContext';
 
 const linksList: Link[] = [
     {
@@ -31,22 +31,12 @@ const linksList: Link[] = [
 export default function Header() {
     const [dropHeader, setDropHeader] = useState(true);
     const [opacity, setOpacity] = useState(0);
-    const [theme, setTheme] = useState<Theme>(loadTheme);
+    const { theme, setTheme } = useTheme();
     const lastY = useRef<number | null>(null);
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
-
-    useEffect(() => {
-        const root = document.documentElement;
-        if (theme === 'dark') {
-            root.classList.add('dark');
-        } else {
-            root.classList.remove('dark');
-        }
-        localStorage.setItem('theme', theme);
-    }, [theme]);
 
     useEffect(() => {
         const handlerScroll = () => {
@@ -79,7 +69,7 @@ export default function Header() {
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 className='font-title text-3xl font-bold text-black-100 md:text-5xl'>Portfólio</h1>
+            <h1 className='font-title text-3xl font-bold text-black-100 select-none md:text-5xl'>Portfólio</h1>
             <nav>
                 <ul className='flex gap-8'>
                     {linksList.map(link => (

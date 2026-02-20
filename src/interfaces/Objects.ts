@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
 export type Theme = 'light' | 'dark';
 
@@ -18,4 +18,9 @@ export interface Link {
     icon: ReactNode;
     url: string;
     target: string;
+}
+
+export interface themeContextType {
+    theme: Theme;
+    setTheme: Dispatch<SetStateAction<Theme>>;
 }
