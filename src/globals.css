@@ -75,6 +75,14 @@
     box-shadow: 0 0 3rem 3rem var(--base-white);
 }
 
+@utility animate-fade-in {
+    animation: fade-in 500ms ease forwards;
+}
+
+@utility animate-fade-out {
+    animation: fade-out 500ms ease forwards;
+}
+
 @utility animate-translate-left {
     animation: animation-translate-left 1.5s forwards;
 }
@@ -100,6 +108,26 @@
     to {
         opacity: 1;
         transform: none;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 

@@ -1,42 +1,15 @@
-import { IconBrandGithub, IconBrandInstagram, IconMail, IconMoon, IconSun } from '@tabler/icons-react';
-import { useEffect, useRef, useState } from 'react';
-import type { Link } from '../../interfaces/Objects';
+import { memo, useEffect, useRef, useState } from 'react';
+import { useMenu } from '../../context/menuContext';
+import MenuButton from './components/MenuButton';
+import MenuMobile from './components/MenuMobile';
+import MenuDask from './components/MenuDesk';
 import clsx from 'clsx';
-import { useTheme } from '../../context/themeContext';
 
-const linksList: Link[] = [
-    {
-        id: 1,
-        name: 'Github',
-        icon: <IconBrandGithub className='icon' />,
-        url: 'https://github.com/Davi-1903',
-        target: '_blank',
-    },
-    {
-        id: 2,
-        name: 'Instagram',
-        icon: <IconBrandInstagram className='icon' />,
-        url: 'https://instagram.com/davifran11',
-        target: '_blank',
-    },
-    {
-        id: 3,
-        name: 'Email',
-        icon: <IconMail className='icon' />,
-        url: 'mailto:franciscodavi327@gmail.com',
-        target: '_self',
-    },
-];
-
-export default function Header() {
+function Header() {
     const [dropHeader, setDropHeader] = useState(true);
     const [opacity, setOpacity] = useState(0);
-    const { theme, setTheme } = useTheme();
+    const { isOpenMenu } = useMenu();
     const lastY = useRef<number | null>(null);
-
-    const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-    };
 
     useEffect(() => {
         const handlerScroll = () => {
@@ -70,26 +43,11 @@ export default function Header() {
             }}
         >
             <h1 className='font-title text-3xl font-bold text-black-100 select-none md:text-5xl'>Portfólio</h1>
-            <nav>
-                <ul className='flex gap-8'>
-                    {linksList.map(link => (
-                        <li key={link.id}>
-                            <a href={link.url} target={link.target} className='cursor-pointer'>
-                                {link.icon}
-                            </a>
-                        </li>
-                    ))}
-                    <li key='toggle-theme'>
-                        <button className='cursor-pointer' onClick={toggleTheme}>
-                            {theme === 'dark' ? (
-                                <IconMoon className='icon hover:translate-none' />
-                            ) : (
-                                <IconSun className='icon hover:translate-none' />
-                            )}
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+            <MenuDask />
+            {isOpenMenu && <MenuMobile />}
+            <MenuButton />
         </header>
     );
 }
+
+export default memo(Header);

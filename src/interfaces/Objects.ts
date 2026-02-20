@@ -24,3 +24,10 @@ export interface themeContextType {
     theme: Theme;
     setTheme: Dispatch<SetStateAction<Theme>>;
 }
+
+export interface menuContextType {
+    isOpenMenu: boolean;
+    isCloseMenu: boolean;
+    setOpenMenu: Dispatch<SetStateAction<boolean>>;
+    setCloseMenu: Dispatch<SetStateAction<boolean>>;
+}

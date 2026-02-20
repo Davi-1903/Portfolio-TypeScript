@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import { projectList } from './projectsList';
 import clsx from 'clsx';
 import CardProject from './components/CardProject';
 
-export default function Projects() {
+function Projects() {
     const [isEmerge, setEmerge] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -43,3 +43,5 @@ export default function Projects() {
         </section>
     );
 }
+
+export default memo(Projects);

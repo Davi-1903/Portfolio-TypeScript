@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
-export default function Welcome() {
+function Welcome() {
     const [isEmerge, setEmerge] = useState(false);
     const [scrolled, setScrolled] = useState(0);
     const welcomeRef = useRef<HTMLDivElement | null>(null);
@@ -49,3 +49,5 @@ export default function Welcome() {
         </section>
     );
 }
+
+export default memo(Welcome);

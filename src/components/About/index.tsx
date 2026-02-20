@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import Technology from '../Technology';
 import clsx from 'clsx';
 import Me from '/Me.jpg';
 
-export default function About() {
+function About() {
     const [isEmerge, setEmerge] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
     const skills = [
@@ -77,3 +77,5 @@ export default function About() {
         </section>
     );
 }
+
+export default memo(About);

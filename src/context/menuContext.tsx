@@ -1,0 +1,35 @@
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import type { menuContextType } from '../interfaces/Objects';
+
+const menuContext = createContext<menuContextType>({
+    isOpenMenu: false,
+    isCloseMenu: false,
+    setOpenMenu: () => {},
+    setCloseMenu: () => {},
+});
+
+export function MenuProvider({ children }: { children: ReactNode }) {
+    const [isOpenMenu, setOpenMenu] = useState(false);
+    const [isCloseMenu, setCloseMenu] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (isOpenMenu) setCloseMenu(true);
+        };
+
+        if (!isOpenMenu) setCloseMenu(false);
+        document.body.style.overflowY = isOpenMenu ? 'hidden' : 'auto';
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isOpenMenu]);
+
+    return (
+        <menuContext.Provider value={{ isOpenMenu, isCloseMenu, setOpenMenu, setCloseMenu }}>
+            {children}
+        </menuContext.Provider>
+    );
+}
+
+export function useMenu() {
+    return useContext(menuContext);
+}

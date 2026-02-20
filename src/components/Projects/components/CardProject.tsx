@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import type { Project } from '../../../interfaces/Objects';
 import Technology from '../../Technology';
 import Contributor from './Contribuitor';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import clsx from 'clsx';
 
-export default function CardProject({ name, description, projectURL, imageURL, team, technologies }: Project) {
+function CardProject({ name, description, projectURL, imageURL, team, technologies }: Project) {
     const [isEmerge, setEmerge] = useState(false);
     const cardRef = useRef(null);
 
@@ -69,3 +69,5 @@ export default function CardProject({ name, description, projectURL, imageURL, t
         </article>
     );
 }
+
+export default memo(CardProject);
