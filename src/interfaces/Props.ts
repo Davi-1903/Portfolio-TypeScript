@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import type { Theme } from './Objects';
 
 export interface SectionEmergeProps {
     children: ReactNode;
@@ -7,6 +8,7 @@ export interface SectionEmergeProps {
 
 export interface SkillProps {
     technology: string;
+    theme?: Theme;
 }
 
 export interface ContributorProps {

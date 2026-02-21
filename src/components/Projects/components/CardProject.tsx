@@ -1,8 +1,8 @@
 import { memo, useEffect, useRef, useState } from 'react';
+import { IconArrowUpRight } from '@tabler/icons-react';
 import type { Project } from '../../../interfaces/Objects';
 import Technology from '../../Technology';
 import Contributor from './Contribuitor';
-import { IconArrowUpRight } from '@tabler/icons-react';
 import clsx from 'clsx';
 
 function CardProject({ name, description, projectURL, imageURL, team, technologies }: Project) {

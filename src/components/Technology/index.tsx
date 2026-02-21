@@ -22,8 +22,9 @@ import {
     IconSquareNumber0,
 } from '@tabler/icons-react';
 import type { SkillProps } from '../../interfaces/Props';
+import clsx from 'clsx';
 
-export default function Technology({ technology }: SkillProps) {
+export default function Technology({ technology, theme = 'light' }: SkillProps) {
     const icons = {
         python: <IconBrandPython className='stroke-blue-600' />,
         html: <IconBrandHtml5 className='stroke-orange-600' />,
@@ -49,7 +50,12 @@ export default function Technology({ technology }: SkillProps) {
     const icon = icons[technology.toLowerCase() as keyof typeof icons] ?? <IconCode />;
 
     return (
-        <span className='flex gap-2 rounded-lg border-2 px-2 py-1 font-primary text-black-100'>
+        <span
+            className={clsx(
+                'flex gap-2 rounded-lg border-2 px-2 py-1 font-primary',
+                theme === 'light' ? 'text-black-100' : 'text-white-100',
+            )}
+        >
             {icon}
             {technology}
         </span>

@@ -9,14 +9,14 @@
     --base-white: #fafaff;
     --base-black: #303040;
     --cursor-default: url('/cursors/cursor-default-light.svg'), auto;
-    --cursor-pointer: url('/cursors/cursor-pointer-light.svg') 3 0, auto;
+    --cursor-pointer: url('/cursors/cursor-pointer-light.svg') 3 0, pointer;
 }
 
 .dark {
     --base-white: #151519;
     --base-black: #eeeeff;
     --cursor-default: url('/cursors/cursor-default-dark.svg'), auto;
-    --cursor-pointer: url('/cursors/cursor-pointer-dark.svg') 3 0, auto;
+    --cursor-pointer: url('/cursors/cursor-pointer-dark.svg') 3 0, pointer;
 }
 
 @theme inline {
