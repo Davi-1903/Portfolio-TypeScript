@@ -38,7 +38,7 @@ export default function MenuMobile() {
     return (
         <nav
             className={clsx(
-                'fixed top-0 left-0 z-2 h-screen w-screen bg-white-100/25 backdrop-blur-2xl',
+                'fixed top-0 left-0 z-2 h-screen w-screen bg-white/25 backdrop-blur-2xl',
                 isCloseMenu ? 'animate-fade-out' : 'animate-fade-in',
             )}
             onAnimationEnd={onAnimationEnd}
@@ -49,7 +49,7 @@ export default function MenuMobile() {
                         <a
                             href={link.url}
                             target={link.target}
-                            className='block cursor-pointer overflow-hidden rounded-xl p-3 font-primary text-5xl font-bold text-ellipsis text-black-100 transition-all duration-100 hover:bg-black-100/25'
+                            className='block cursor-pointer overflow-hidden rounded-xl p-3 font-primary text-5xl font-bold text-ellipsis text-black transition-all duration-100 hover:bg-black/25'
                         >
                             {link.name}
                         </a>
@@ -57,7 +57,7 @@ export default function MenuMobile() {
                 ))}
                 <li key='toggle-theme'>
                     <button
-                        className='cursor-pointer rounded-xl p-2 transition-all duration-100 hover:bg-black-100/25'
+                        className='cursor-pointer rounded-xl p-2 transition-all duration-100 hover:bg-black/25'
                         onClick={toggleTheme}
                     >
                         {theme === 'dark' ? (

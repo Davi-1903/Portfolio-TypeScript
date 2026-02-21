@@ -17,13 +17,13 @@ export default function MenuButton() {
         >
             <div
                 className={clsx(
-                    'absolute h-1/10 w-4/5 rounded-full bg-black-100 transition-all duration-500',
+                    'absolute h-1/10 w-4/5 rounded-full bg-black transition-all duration-500',
                     isOpenMenu && !isCloseMenu ? 'top-1/2 left-1/2 -translate-1/2 rotate-225' : 'top-3/10 left-1/10',
                 )}
             ></div>
             <div
                 className={clsx(
-                    'absolute h-1/10 w-4/5 rounded-full bg-black-100 transition-all duration-500',
+                    'absolute h-1/10 w-4/5 rounded-full bg-black transition-all duration-500',
                     isOpenMenu && !isCloseMenu
                         ? 'right-1/2 bottom-1/2 translate-1/2 -rotate-225'
                         : 'right-1/10 bottom-3/10',

@@ -40,7 +40,7 @@ function Welcome() {
         >
             <h1
                 className={clsx(
-                    'font-primary text-5xl font-bold text-black-100 opacity-0 md:text-8xl',
+                    'font-primary text-5xl font-bold text-black opacity-0 md:text-8xl',
                     isEmerge && 'animate-welcome',
                 )}
             >

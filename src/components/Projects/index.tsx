@@ -22,11 +22,11 @@ function Projects() {
     }, []);
 
     return (
-        <section ref={sectionRef} className='flex min-h-screen flex-col gap-24 bg-white-100 p-8 pt-0 lg:p-24'>
+        <section ref={sectionRef} className='flex min-h-screen flex-col gap-24 bg-white p-8 pt-0 lg:p-24'>
             <div>
                 <h2
                     className={clsx(
-                        'text-center font-primary text-4xl/normal font-bold text-black-100 opacity-0 md:text-6xl/normal',
+                        'text-center font-primary text-4xl/normal font-bold text-black opacity-0 md:text-6xl/normal',
                         isEmerge && 'animate-translate-up',
                     )}
                 >

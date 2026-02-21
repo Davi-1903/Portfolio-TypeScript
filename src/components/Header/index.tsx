@@ -42,7 +42,7 @@ function Header() {
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 className='font-title text-3xl font-bold text-black-100 select-none md:text-5xl'>Portfólio</h1>
+            <h1 className='font-title text-3xl font-bold text-black select-none md:text-5xl'>Portfólio</h1>
             <MenuDask />
             {isOpenMenu && <MenuMobile />}
             <MenuButton />

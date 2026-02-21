@@ -23,10 +23,10 @@ export default function BackButton() {
             )}
         >
             <button
-                className='pointer-events-auto cursor-(--cursor-default) border-2 border-black-100 bg-white-100 p-2 shadow-[3px_3px_0_var(--color-black-100)] hover:translate-[-3px] hover:shadow-[6px_6px_0_var(--color-black-100)] active:translate-none active:shadow-none'
+                className='pointer-events-auto cursor-(--cursor-default) border-2 border-black bg-white p-2 shadow-[3px_3px_0_var(--color-black)] hover:translate-[-3px] hover:shadow-[6px_6px_0_var(--color-black)] active:translate-none active:shadow-none'
                 onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
             >
-                <IconArrowUp size={32} className='stroke-black-100' />
+                <IconArrowUp size={32} className='stroke-black' />
             </button>
         </article>
     );
