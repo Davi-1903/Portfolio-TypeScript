@@ -50,7 +50,7 @@ function About() {
         >
             <div
                 className={clsx(
-                    'w-sm border-2 border-black-100 bg-white-100 p-4 opacity-0 shadow-basic',
+                    'w-sm border-2 border-black-100 bg-white-100 p-4 opacity-0 not-dark:shadow-basic',
                     isEmerge && 'animate-translate-left',
                 )}
             >

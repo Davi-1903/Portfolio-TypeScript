@@ -29,7 +29,7 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
         <article
             ref={cardRef}
             className={clsx(
-                'flex -translate-2 break-inside-avoid flex-col gap-4 border-2 border-black-100 bg-white-100 p-4 opacity-0 shadow-basic',
+                'flex -translate-2 break-inside-avoid flex-col gap-4 border-2 border-black-100 bg-white-100 p-4 opacity-0 not-dark:shadow-basic',
                 isEmerge && 'animate-translate-down',
             )}
         >
@@ -56,9 +56,9 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
                     </li>
                 ))}
             </ul>
-            <a href={projectURL} target='_blank' className='mt-2 w-fit'>
-                <button className='group relative cursor-pointer self-start overflow-x-hidden border-2 border-black-100 bg-black-100 px-4 py-2 font-primary text-lg font-semibold text-white-100 transition-all duration-250 hover:pr-14 hover:text-black-100'>
-                    <div className='absolute top-0 left-0 h-full w-0 bg-white-100 transition-all duration-250 group-hover:w-full'></div>
+            <a href={projectURL} target='_blank' className='mt-2 w-full bg-orange-600 md:w-fit'>
+                <button className='group relative w-full cursor-pointer self-start overflow-x-hidden border-2 border-black-100 bg-black-100 px-4 py-2 font-primary text-lg font-semibold text-white-100 transition-all duration-250 not-dark:hover:text-black-100 md:hover:pr-14 dark:bg-white-100 dark:text-black-100 dark:hover:text-white-100'>
+                    <div className='absolute top-0 left-0 h-full w-0 bg-white-100 transition-all duration-250 group-hover:w-full dark:bg-black-100'></div>
                     <span className='relative'>View on Github</span>
                     <IconArrowUpRight
                         size={32}
