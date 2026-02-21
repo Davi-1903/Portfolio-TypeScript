@@ -1,7 +1,7 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { projectList } from './projectsList';
-import clsx from 'clsx';
 import CardProject from './components/CardProject';
+import clsx from 'clsx';
 
 function Projects() {
     const [isEmerge, setEmerge] = useState(false);

@@ -25,8 +25,8 @@ function Welcome() {
         if (welcomeRef.current) observer.observe(welcomeRef.current);
         window.addEventListener('scroll', handlerScroll);
         return () => {
-            window.removeEventListener('scroll', handlerScroll);
             observer.disconnect();
+            window.removeEventListener('scroll', handlerScroll);
         };
     }, []);
 
