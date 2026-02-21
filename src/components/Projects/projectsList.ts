@@ -28,7 +28,7 @@ export const projectList: Project[] = [
         description: 'Secund project made to study neural networks',
         imageURL: '/projects/Dino-IA.webp',
         projectURL: 'https://github.com/Davi-1903/Dino-IA',
-        technologies: ['PyGame', 'NumPy'],
+        technologies: ['PyGame', 'NumPy', 'AI'],
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ export const projectList: Project[] = [
         description: 'Intelligent Education Support System.',
         imageURL: '/projects/EduIA.webp',
         projectURL: 'https://github.com/Davi-1903/EduIA',
-        technologies: ['React', 'Flask', 'Tailwind', 'MySQL', 'IA'],
+        technologies: ['React', 'Flask', 'Tailwind', 'MySQL', 'AI'],
         team: [
             { id: 1, name: 'Ana Cecilya', url: 'https://github.com/cecilya1' },
             { id: 2, name: 'Ana Clara', url: 'https://github.com/anaclaraa1' },
@@ -50,7 +50,7 @@ export const projectList: Project[] = [
         description: 'First project mate to study neural networks',
         imageURL: '/projects/Flappy-Bird-IA.webp',
         projectURL: 'https://github.com/Davi-1903/Flappy-Bird-IA',
-        technologies: ['PyGame', 'NumPy'],
+        technologies: ['PyGame', 'NumPy', 'AI'],
     },
     {
         id: 6,
@@ -58,7 +58,7 @@ export const projectList: Project[] = [
         description: 'Simple ChatBot with Flask and React',
         imageURL: '/projects/ChatBot.webp',
         projectURL: 'https://github.com/Davi-1903/ChatBot',
-        technologies: ['React', 'Flask'],
+        technologies: ['React', 'Flask', 'AI'],
     },
     {
         id: 7,

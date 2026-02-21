@@ -17,10 +17,18 @@ export function MenuProvider({ children }: { children: ReactNode }) {
             if (isOpenMenu) setCloseMenu(true);
         };
 
+        const handleKeydown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') setCloseMenu(true);
+        };
+
         if (!isOpenMenu) setCloseMenu(false);
         document.body.style.overflowY = isOpenMenu ? 'hidden' : 'auto';
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener('keydown', handleKeydown);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('keydown', handleKeydown);
+        };
     }, [isOpenMenu]);
 
     return (

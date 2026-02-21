@@ -47,7 +47,7 @@ export default function Technology({ technology, theme = 'light' }: SkillProps) 
         vscode: <IconBrandVscode className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
         vite: <IconBrandVite className='stroke-purple-600 dark:drop-shadow-[0_0_6px_var(--color-purple-600)]' />,
         docker: <IconBrandDocker className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
-        ia: <IconBrain className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
+        ai: <IconBrain className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
         pygame: <IconDeviceGamepad2 className='stroke-green-600 dark:drop-shadow-[0_0_6px_var(--color-green-600)]' />,
         numpy: <IconSquareNumber0 className='stroke-blue-400 dark:drop-shadow-[0_0_6px_var(--color-blue-400)]' />,
     };
