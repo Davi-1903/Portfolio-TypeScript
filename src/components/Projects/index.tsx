@@ -33,7 +33,7 @@ function Projects() {
                     Projects
                 </h2>
             </div>
-            <ul className='flex-1 columns-sm gap-8 sm:columns-2 md:gap-12 lg:columns-sm'>
+            <ul className='mx-auto w-full max-w-600 flex-1 columns-sm gap-8 sm:columns-2 md:gap-12 lg:columns-sm'>
                 {projectList.map(project => (
                     <li key={project.id} className='not-last:mb-12'>
                         <CardProject {...project} />

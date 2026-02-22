@@ -34,7 +34,7 @@ function Header() {
     return (
         <header
             className={clsx(
-                'h-header fixed top-0 z-1 flex w-full animate-translate-up items-center justify-between p-4 transition-all duration-200 md:p-8',
+                'fixed top-0 z-1 w-full animate-translate-up transition-all duration-200',
                 dropHeader ? 'translate-none' : '-translate-y-full',
             )}
             style={{
@@ -42,10 +42,12 @@ function Header() {
                 borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
             }}
         >
-            <h1 className='font-title text-3xl font-bold text-black select-none md:text-5xl'>Portfólio</h1>
-            <MenuDask />
-            {isOpenMenu && <MenuMobile />}
-            <MenuButton />
+            <div className='mx-auto flex w-full max-w-600 items-center justify-between p-4 md:p-8'>
+                <h1 className='font-title text-3xl font-bold text-black select-none md:text-5xl'>Portfólio</h1>
+                <MenuDask />
+                {isOpenMenu && <MenuMobile />}
+                <MenuButton />
+            </div>
         </header>
     );
 }
