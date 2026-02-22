@@ -56,7 +56,7 @@ export default function Technology({ technology, theme = 'light' }: SkillProps) 
     return (
         <span
             className={clsx(
-                'flex gap-2 rounded-lg border-2 px-2 py-1 font-primary',
+                'flex gap-2 rounded-md border-2 px-2 py-1 font-primary',
                 theme === 'light' ? 'text-black' : 'text-white',
             )}
         >
