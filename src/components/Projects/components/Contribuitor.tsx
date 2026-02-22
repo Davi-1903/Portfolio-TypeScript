@@ -5,7 +5,7 @@ export default function Contributor({ name, url }: ContributorProps) {
         <a
             href={url}
             target='_blank'
-            className='block cursor-pointer rounded-md border-2 border-black px-2 py-1 font-primary text-black underline hover:decoration-2'
+            className='block cursor-pointer rounded-md border-2 border-secund px-2 py-1 font-primary text-secund underline hover:decoration-2'
         >
             {name}
         </a>

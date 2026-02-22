@@ -38,12 +38,12 @@ function Header() {
                 dropHeader ? 'translate-none' : '-translate-y-full',
             )}
             style={{
-                backgroundColor: `hsl(from var(--base-white) h s l / ${opacity})`,
-                borderBottom: `2px solid hsl(from var(--base-black) h s l / ${opacity})`,
+                backgroundColor: `hsl(from var(--base-first) h s l / ${opacity})`,
+                borderBottom: `2px solid hsl(from var(--base-secund) h s l / ${opacity})`,
             }}
         >
             <div className='mx-auto flex w-full max-w-600 items-center justify-between p-4 md:p-8'>
-                <h1 className='font-title text-3xl font-bold text-black select-none md:text-5xl'>Portfólio</h1>
+                <h1 className='font-title text-3xl font-bold text-secund select-none md:text-5xl'>Portfólio</h1>
                 <MenuDask />
                 {isOpenMenu && <MenuMobile />}
                 <MenuButton />

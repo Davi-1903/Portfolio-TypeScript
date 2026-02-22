@@ -38,11 +38,11 @@ export default function Technology({ technology, theme = 'light' }: SkillProps) 
         mysql: <IconBrandMysql className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
         sqlite: <IconDatabase className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
         markdown: <IconBook className='stroke-teal-600 dark:drop-shadow-[0_0_6px_var(--color-teal-600)]' />,
-        flask: <IconFlask className='dark:drop-shadow-[0_0_6px_var(--color-black)]' />,
+        flask: <IconFlask className='dark:drop-shadow-[0_0_6px_var(--color-secund)]' />,
         react: <IconBrandReact className='stroke-cyan-600 dark:drop-shadow-[0_0_6px_var(--color-cyan-600)]' />,
         tailwind: <IconBrandTailwind className='stroke-teal-400 dark:drop-shadow-[0_0_6px_var(--color-teal-400)]' />,
         git: <IconBrandGit className='stroke-orange-600 dark:drop-shadow-[0_0_6px_var(--color-orange-600)]' />,
-        github: <IconBrandGithub className='dark:drop-shadow-[0_0_6px_var(--color-black)]' />,
+        github: <IconBrandGithub className='dark:drop-shadow-[0_0_6px_var(--color-secund)]' />,
         figma: <IconBrandFigma className='stroke-rose-500 dark:drop-shadow-[0_0_6px_var(--color-rose-500)]' />,
         vscode: <IconBrandVscode className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
         vite: <IconBrandVite className='stroke-purple-600 dark:drop-shadow-[0_0_6px_var(--color-purple-600)]' />,
@@ -57,7 +57,7 @@ export default function Technology({ technology, theme = 'light' }: SkillProps) 
         <span
             className={clsx(
                 'flex gap-2 rounded-md border-2 px-2 py-1 font-primary',
-                theme === 'light' ? 'text-black' : 'text-white',
+                theme === 'light' ? 'text-secund' : 'text-first',
             )}
         >
             {icon}

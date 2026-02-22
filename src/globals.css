@@ -6,15 +6,15 @@
     --font-primary: 'Chivo Mono';
     --font-secundary: 'Roboto';
     --font-title: 'Parisienne';
-    --base-white: #fafaff;
-    --base-black: #303040;
+    --color-first: #fafaff;
+    --color-secund: #303040;
     --cursor-default: url('/cursors/cursor-default-light.svg'), auto;
     --cursor-pointer: url('/cursors/cursor-pointer-light.svg') 3 0, pointer;
 }
 
 .dark {
-    --base-white: #151519;
-    --base-black: #eeeeff;
+    --color-first: #151519;
+    --color-secund: #eeeeff;
     --cursor-default: url('/cursors/cursor-default-dark.svg'), auto;
     --cursor-pointer: url('/cursors/cursor-pointer-dark.svg') 3 0, pointer;
 }
@@ -23,8 +23,8 @@
     --font-primary: var(--font-primary);
     --font-secundary: var(--font-secundary);
     --font-title: var(--font-title);
-    --color-white: var(--base-white);
-    --color-black: var(--base-black);
+    --color-first: var(--color-first);
+    --color-secund: var(--color-secund);
     --cursor-pointer: var(--cursor-pointer);
 }
 
@@ -52,7 +52,7 @@
 
 @layer components {
     .icon {
-        @apply h-[32pt] w-[32pt] stroke-black transition-all duration-125 hover:-translate-y-2;
+        @apply h-[32pt] w-[32pt] stroke-secund transition-all duration-125 hover:-translate-y-2;
     }
 }
 
@@ -61,7 +61,7 @@
 }
 
 @utility shadow-basic {
-    box-shadow: 0.5rem 0.5rem 0 var(--base-black);
+    box-shadow: 0.5rem 0.5rem 0 var(--color-secund);
 }
 
 @utility animate-fade-in {

@@ -29,16 +29,16 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
         <article
             ref={cardRef}
             className={clsx(
-                'flex -translate-2 break-inside-avoid flex-col gap-4 border-2 border-black bg-white p-4 opacity-0 not-dark:shadow-basic',
+                'flex -translate-2 break-inside-avoid flex-col gap-4 border-2 border-secund bg-first p-4 opacity-0 not-dark:shadow-basic',
                 isEmerge && 'animate-translate-down',
             )}
         >
-            <img src={imageURL} alt={`Project ${name}`} className='border-2 border-black' loading='lazy' />
-            <h3 className='font-primary text-4xl font-bold text-black'>{name}</h3>
-            <p className='dark:text-black-50 font-secundary text-2xl text-black'>{description}</p>
+            <img src={imageURL} alt={`Project ${name}`} className='border-2 border-secund' loading='lazy' />
+            <h3 className='font-primary text-4xl font-bold text-secund'>{name}</h3>
+            <p className='dark:text-secund-50 font-secundary text-2xl text-secund'>{description}</p>
             {team && (
                 <>
-                    <h4 className='font-primary text-2xl font-bold text-black'>Team</h4>
+                    <h4 className='font-primary text-2xl font-bold text-secund'>Team</h4>
                     <ul className='flex flex-wrap gap-2'>
                         {team.map(contributor => (
                             <li key={contributor.id}>
@@ -48,7 +48,7 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
                     </ul>
                 </>
             )}
-            <h4 className='font-primary text-2xl font-bold text-black'>Technologies</h4>
+            <h4 className='font-primary text-2xl font-bold text-secund'>Technologies</h4>
             <ul className='flex flex-wrap gap-2'>
                 {technologies.map((technology, idx) => (
                     <li key={idx}>
@@ -57,8 +57,8 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
                 ))}
             </ul>
             <a href={projectURL} target='_blank' className='mt-2 w-full bg-orange-600 md:w-fit'>
-                <button className='group relative w-full cursor-pointer self-start overflow-x-hidden border-2 border-black bg-black px-4 py-2 font-primary text-lg font-semibold text-white transition-all duration-250 not-dark:hover:text-black md:hover:pr-14 dark:bg-white dark:text-black dark:hover:text-white'>
-                    <div className='absolute top-0 left-0 h-full w-0 bg-white transition-all duration-250 group-hover:w-full dark:bg-black'></div>
+                <button className='group relative w-full cursor-pointer self-start overflow-x-hidden border-2 border-secund bg-secund px-4 py-2 font-primary text-lg font-semibold text-first transition-all duration-250 not-dark:hover:text-secund md:hover:pr-14 dark:bg-first dark:text-secund dark:hover:text-first'>
+                    <div className='absolute top-0 left-0 h-full w-0 bg-first transition-all duration-250 group-hover:w-full dark:bg-secund'></div>
                     <span className='relative'>View on Github</span>
                     <IconArrowUpRight
                         size={32}
