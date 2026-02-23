@@ -14,13 +14,13 @@ const Parallax = () => {
 
     return (
         <>
-            <div className='absolute inset-0 bg-[url(background-light/background-4.webp)] bg-cover bg-fixed bg-center dark:bg-[url(background-dark/background-4.webp)]'></div>
+            <div className='absolute inset-0 bg-[url(/background-light/background-4.webp)] bg-cover bg-fixed bg-center dark:bg-[url(/background-dark/background-4.webp)]'></div>
             <div
-                className='absolute inset-0 bg-[url(background-light/background-3.webp)] bg-cover bg-center dark:bg-[url(background-dark/background-3.webp)]'
+                className='absolute inset-0 bg-[url(/background-light/background-3.webp)] bg-cover bg-center dark:bg-[url(/background-dark/background-3.webp)]'
                 style={{ transform: `translateY(${scroll / 2}px)` }}
             ></div>
             <div
-                className='absolute inset-0 bg-[url(background-light/background-2.webp)] bg-cover bg-center dark:bg-[url(background-dark/background-2.webp)]'
+                className='absolute inset-0 bg-[url(/background-light/background-2.webp)] bg-cover bg-center dark:bg-[url(/background-dark/background-2.webp)]'
                 style={{ transform: `translateY(${scroll / 4}px)` }}
             ></div>
             <div className='absolute inset-0 bg-[url(/background-light/background-1.webp)] bg-cover bg-center dark:bg-[url(/background-dark/background-1.webp)]'></div>
