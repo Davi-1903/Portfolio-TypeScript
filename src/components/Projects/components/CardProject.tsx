@@ -5,7 +5,7 @@ import Technology from '../../Technology';
 import Contributor from './Contribuitor';
 import clsx from 'clsx';
 
-function CardProject({ name, description, projectURL, imageURL, team, technologies }: Project) {
+const CardProject = ({ name, description, projectURL, imageURL, team, technologies }: Project) => {
     const [isEmerge, setEmerge] = useState(false);
     const cardRef = useRef(null);
 
@@ -68,6 +68,6 @@ function CardProject({ name, description, projectURL, imageURL, team, technologi
             </a>
         </article>
     );
-}
+};
 
 export default memo(CardProject);

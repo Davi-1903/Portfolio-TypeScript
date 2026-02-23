@@ -8,7 +8,7 @@ const menuContext = createContext<menuContextType>({
     setCloseMenu: () => {},
 });
 
-export function MenuProvider({ children }: { children: ReactNode }) {
+export const MenuProvider = ({ children }: { children: ReactNode }) => {
     const [isOpenMenu, setOpenMenu] = useState(false);
     const [isCloseMenu, setCloseMenu] = useState(false);
 
@@ -36,8 +36,8 @@ export function MenuProvider({ children }: { children: ReactNode }) {
             {children}
         </menuContext.Provider>
     );
-}
+};
 
-export function useMenu() {
+export const useMenu = () => {
     return useContext(menuContext);
-}
+};

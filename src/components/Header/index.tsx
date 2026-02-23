@@ -1,11 +1,12 @@
 import { memo, useEffect, useRef, useState } from 'react';
+import type { HeaderProps } from '../../interfaces/Props';
 import { useMenu } from '../../context/menuContext';
 import MenuButton from './components/MenuButton';
 import MenuMobile from './components/MenuMobile';
 import MenuDask from './components/MenuDesk';
 import clsx from 'clsx';
 
-function Header() {
+const Header = ({ loadingEnd }: HeaderProps) => {
     const [dropHeader, setDropHeader] = useState(true);
     const [opacity, setOpacity] = useState(0);
     const { isOpenMenu } = useMenu();
@@ -34,12 +35,13 @@ function Header() {
     return (
         <header
             className={clsx(
-                'fixed top-0 z-1 w-full animate-translate-up transition-all duration-200',
+                'fixed top-0 z-1 w-full opacity-0 transition-all duration-200',
                 dropHeader ? 'translate-none' : '-translate-y-full',
+                loadingEnd && 'animate-header',
             )}
             style={{
-                backgroundColor: `hsl(from var(--base-first) h s l / ${opacity})`,
-                borderBottom: `2px solid hsl(from var(--base-secund) h s l / ${opacity})`,
+                backgroundColor: `hsl(from var(--first-color) h s l / ${opacity})`,
+                borderBottom: `2px solid hsl(from var(--secund-color) h s l / ${opacity})`,
             }}
         >
             <div className='mx-auto flex w-full max-w-600 items-center justify-between p-4 md:p-8'>
@@ -50,6 +52,6 @@ function Header() {
             </div>
         </header>
     );
-}
+};
 
 export default memo(Header);

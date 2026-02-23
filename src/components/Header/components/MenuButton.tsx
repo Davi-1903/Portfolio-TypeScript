@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useMenu } from '../../../context/menuContext';
 
-export default function MenuButton() {
+const MenuButton = () => {
     const { isOpenMenu, isCloseMenu, setOpenMenu, setCloseMenu } = useMenu();
 
     const toggleMenu = () => {
@@ -31,4 +31,6 @@ export default function MenuButton() {
             ></div>
         </button>
     );
-}
+};
+
+export default MenuButton;

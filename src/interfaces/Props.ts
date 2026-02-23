@@ -1,9 +1,16 @@
-import type { ReactNode } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 import type { Theme } from './Objects';
 
-export interface SectionEmergeProps {
-    children: ReactNode;
-    threshold: number;
+export interface AppProps {
+    loadingEnd: boolean;
+}
+
+export interface HeaderProps {
+    loadingEnd: boolean;
+}
+
+export interface WelcomeProps {
+    loadingEnd: boolean;
 }
 
 export interface SkillProps {
@@ -14,4 +21,9 @@ export interface SkillProps {
 export interface ContributorProps {
     name: string;
     url: string;
+}
+
+export interface LoadingProps {
+    isReady: boolean;
+    setLoadingEnd: Dispatch<SetStateAction<boolean>>;
 }

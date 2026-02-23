@@ -3,7 +3,7 @@ import Technology from '../Technology';
 import clsx from 'clsx';
 import Me from '/Me.webp';
 
-function About() {
+const About = () => {
     const [isEmerge, setEmerge] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
     const skills = [
@@ -76,6 +76,6 @@ function About() {
             </div>
         </section>
     );
-}
+};
 
 export default memo(About);

@@ -1,7 +1,7 @@
 import { useTheme } from '../../context/themeContext';
 import Technology from '../Technology';
 
-export default function Footer() {
+const Footer = () => {
     const { theme } = useTheme();
 
     return (
@@ -16,4 +16,6 @@ export default function Footer() {
             </p>
         </footer>
     );
-}
+};
+
+export default Footer;

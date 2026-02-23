@@ -6,15 +6,15 @@
     --font-primary: 'Chivo Mono';
     --font-secundary: 'Roboto';
     --font-title: 'Parisienne';
-    --color-first: #fafaff;
-    --color-secund: #303040;
+    --first-color: #fafaff;
+    --secund-color: #303040;
     --cursor-default: url('/cursors/cursor-default-light.svg'), auto;
     --cursor-pointer: url('/cursors/cursor-pointer-light.svg') 3 0, pointer;
 }
 
 .dark {
-    --color-first: #151519;
-    --color-secund: #eeeeff;
+    --first-color: #151519;
+    --secund-color: #eeeeff;
     --cursor-default: url('/cursors/cursor-default-dark.svg'), auto;
     --cursor-pointer: url('/cursors/cursor-pointer-dark.svg') 3 0, pointer;
 }
@@ -23,8 +23,8 @@
     --font-primary: var(--font-primary);
     --font-secundary: var(--font-secundary);
     --font-title: var(--font-title);
-    --color-first: var(--color-first);
-    --color-secund: var(--color-secund);
+    --color-first: var(--first-color);
+    --color-secund: var(--secund-color);
     --cursor-pointer: var(--cursor-pointer);
 }
 
@@ -57,7 +57,11 @@
 }
 
 @utility animate-welcome {
-    animation: animation-welcome 2s 500ms forwards;
+    animation: animation-welcome 2s 0s forwards;
+}
+
+@utility animate-header {
+    animation: animation-translate-up 2s 0s forwards;
 }
 
 @utility shadow-basic {
@@ -86,6 +90,10 @@
 
 @utility animate-translate-up {
     animation: animation-translate-up 1.5s forwards;
+}
+
+@utility animate-loading {
+    animation: animation-loading 1s 2s ease both;
 }
 
 @keyframes animation-welcome {
@@ -165,6 +173,16 @@
     to {
         transform: translate(0, 0);
         opacity: 1;
+    }
+}
+
+@keyframes animation-loading {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: var(--color-secund);
     }
 }
 

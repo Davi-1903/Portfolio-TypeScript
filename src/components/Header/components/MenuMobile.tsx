@@ -23,7 +23,7 @@ const linksList = [
     },
 ];
 
-export default function MenuMobile() {
+const MenuMobile = () => {
     const { isCloseMenu, setOpenMenu } = useMenu();
     const { theme, setTheme } = useTheme();
 
@@ -70,4 +70,6 @@ export default function MenuMobile() {
             </ul>
         </nav>
     );
-}
+};
+
+export default MenuMobile;

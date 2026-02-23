@@ -22,7 +22,7 @@ const linksList = [
     },
 ];
 
-export default function MenuDask() {
+const MenuDask = () => {
     const { theme, setTheme } = useTheme();
 
     const toggleTheme = () => {
@@ -51,4 +51,6 @@ export default function MenuDask() {
             </ul>
         </nav>
     );
-}
+};
+
+export default MenuDask;

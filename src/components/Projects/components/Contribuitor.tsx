@@ -1,6 +1,6 @@
 import type { ContributorProps } from '../../../interfaces/Props';
 
-export default function Contributor({ name, url }: ContributorProps) {
+const Contributor = ({ name, url }: ContributorProps) => {
     return (
         <a
             href={url}
@@ -10,4 +10,6 @@ export default function Contributor({ name, url }: ContributorProps) {
             {name}
         </a>
     );
-}
+};
+
+export default Contributor;

@@ -24,7 +24,7 @@ import {
 import type { SkillProps } from '../../interfaces/Props';
 import clsx from 'clsx';
 
-export default function Technology({ technology, theme = 'light' }: SkillProps) {
+const Technology = ({ technology, theme = 'light' }: SkillProps) => {
     const icons = {
         python: <IconBrandPython className='stroke-blue-600 dark:drop-shadow-[0_0_6px_var(--color-blue-600)]' />,
         html: <IconBrandHtml5 className='stroke-orange-600 dark:drop-shadow-[0_0_6px_var(--color-orange-600)]' />,
@@ -64,4 +64,6 @@ export default function Technology({ technology, theme = 'light' }: SkillProps) 
             {technology}
         </span>
     );
-}
+};
+
+export default Technology;

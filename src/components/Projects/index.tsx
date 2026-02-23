@@ -3,7 +3,7 @@ import { projectList } from './projectsList';
 import CardProject from './components/CardProject';
 import clsx from 'clsx';
 
-function Projects() {
+const Projects = () => {
     const [isEmerge, setEmerge] = useState(false);
     const sectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -42,6 +42,6 @@ function Projects() {
             </ul>
         </section>
     );
-}
+};
 
 export default memo(Projects);

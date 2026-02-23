@@ -7,7 +7,7 @@ const themeContext = createContext<themeContextType>({
     setTheme: () => {},
 });
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setTheme] = useState<Theme>(loadTheme);
 
     useEffect(() => {
@@ -21,8 +21,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }, [theme]);
 
     return <themeContext.Provider value={{ theme, setTheme }}>{children}</themeContext.Provider>;
-}
+};
 
-export function useTheme() {
+export const useTheme = () => {
     return useContext(themeContext);
-}
+};

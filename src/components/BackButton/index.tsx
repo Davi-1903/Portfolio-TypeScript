@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { IconArrowUp } from '@tabler/icons-react';
 import clsx from 'clsx';
 
-export default function BackButton() {
+const BackButton = () => {
     const [isEmerge, setEmerge] = useState(false);
 
     useEffect(() => {
@@ -31,4 +31,6 @@ export default function BackButton() {
             </button>
         </article>
     );
-}
+};
+
+export default BackButton;

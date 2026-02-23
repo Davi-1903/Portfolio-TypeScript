@@ -1,8 +1,8 @@
 import { memo, useEffect, useRef, useState } from 'react';
+import type { WelcomeProps } from '../../interfaces/Props';
 import clsx from 'clsx';
 
-function Welcome() {
-    const [isEmerge, setEmerge] = useState(false);
+const Welcome = ({ loadingEnd }: WelcomeProps) => {
     const [scrolled, setScrolled] = useState(0);
     const welcomeRef = useRef<HTMLDivElement | null>(null);
 
@@ -11,23 +11,8 @@ function Welcome() {
             setScrolled(window.scrollY / 2);
         };
 
-        const observer = new IntersectionObserver(
-            entries =>
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setEmerge(true);
-                        observer.unobserve(entry.target);
-                    }
-                }),
-            { threshold: 0.5 },
-        );
-
-        if (welcomeRef.current) observer.observe(welcomeRef.current);
         window.addEventListener('scroll', handlerScroll);
-        return () => {
-            observer.disconnect();
-            window.removeEventListener('scroll', handlerScroll);
-        };
+        return () => window.removeEventListener('scroll', handlerScroll);
     }, []);
 
     return (
@@ -41,13 +26,13 @@ function Welcome() {
             <h1
                 className={clsx(
                     'font-primary text-5xl font-bold text-secund opacity-0 md:text-8xl',
-                    isEmerge && 'animate-welcome',
+                    loadingEnd && 'animate-welcome',
                 )}
             >
                 Hi! I'm Davi
             </h1>
         </section>
     );
-}
+};
 
 export default memo(Welcome);
