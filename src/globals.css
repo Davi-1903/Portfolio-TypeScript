@@ -57,11 +57,11 @@
 }
 
 @utility animate-welcome {
-    animation: animation-welcome 2s 0s forwards;
+    animation: animation-welcome 2s forwards;
 }
 
 @utility animate-header {
-    animation: animation-translate-up 2s 0s forwards;
+    animation: animation-translate-up 2s forwards;
 }
 
 @utility shadow-basic {
