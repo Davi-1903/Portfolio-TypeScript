@@ -177,11 +177,12 @@
 }
 
 @keyframes animation-loading {
-    from {
+    0% {
         fill: transparent;
     }
 
-    to {
+    25%,
+    100% {
         fill: var(--color-secund);
     }
 }
