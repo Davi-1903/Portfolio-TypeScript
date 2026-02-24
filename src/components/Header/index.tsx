@@ -45,7 +45,7 @@ const Header = ({ loadingEnd }: HeaderProps) => {
             }}
         >
             <div className='mx-auto flex w-full max-w-600 items-center justify-between p-4 md:p-8'>
-                <h1 className='font-title text-3xl font-bold text-secund select-none md:text-5xl'>Portfólio</h1>
+                <h1 className='font-title text-3xl font-bold text-secund select-none md:text-5xl'>Davi F.</h1>
                 <MenuDask />
                 {isOpenMenu && <MenuMobile />}
                 <MenuButton />
