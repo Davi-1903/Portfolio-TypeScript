@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from '../../../context/themeContext';
-import LayerLight1 from '../../../../public/background-light/background-1.webp';
-import LayerLight2 from '../../../../public/background-light/background-2.webp';
-import LayerLight3 from '../../../../public/background-light/background-3.webp';
-import LayerLight4 from '../../../../public/background-light/background-4.webp';
-import LayerDark1 from '../../../../public/background-dark/background-1.webp';
-import LayerDark2 from '../../../../public/background-dark/background-2.webp';
-import LayerDark3 from '../../../../public/background-dark/background-3.webp';
-import LayerDark4 from '../../../../public/background-dark/background-4.webp';
+import LayerLight1 from '@/assets/background-light/background-1.webp';
+import LayerLight2 from '@/assets/background-light/background-2.webp';
+import LayerLight3 from '@/assets/background-light/background-3.webp';
+import LayerLight4 from '@/assets/background-light/background-4.webp';
+import LayerDark1 from '@/assets/background-dark/background-1.webp';
+import LayerDark2 from '@/assets/background-dark/background-2.webp';
+import LayerDark3 from '@/assets/background-dark/background-3.webp';
+import LayerDark4 from '@/assets/background-dark/background-4.webp';
 
 const Parallax = () => {
     const { theme } = useTheme();

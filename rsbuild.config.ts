@@ -7,4 +7,14 @@ export default defineConfig({
     html: {
         template: './index.html',
     },
+    resolve: {
+        alias: {
+            '@': './src',
+        },
+    },
+    performance: {
+        chunkSplit: {
+            strategy: 'split-by-module',
+        },
+    },
 });
