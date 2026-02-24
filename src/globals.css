@@ -8,15 +8,15 @@
     --font-title: 'Parisienne';
     --first-color: #fafaff;
     --secund-color: #303040;
-    --cursor-default: url('/cursors/cursor-default-light.svg'), auto;
-    --cursor-pointer: url('/cursors/cursor-pointer-light.svg') 3 0, pointer;
+    --cursor-default: url('../public/cursors/cursor-default-light.svg'), auto;
+    --cursor-pointer: url('../public/cursors/cursor-pointer-light.svg') 3 0, pointer;
 }
 
 .dark {
     --first-color: #151519;
     --secund-color: #eeeeff;
-    --cursor-default: url('/cursors/cursor-default-dark.svg'), auto;
-    --cursor-pointer: url('/cursors/cursor-pointer-dark.svg') 3 0, pointer;
+    --cursor-default: url('../public/cursors/cursor-default-dark.svg'), auto;
+    --cursor-pointer: url('../public/cursors/cursor-pointer-dark.svg') 3 0, pointer;
 }
 
 @theme inline {

@@ -23,7 +23,7 @@ const BackButton = () => {
             )}
         >
             <button
-                className='pointer-events-auto cursor-(--cursor-default) border-2 border-secund bg-first p-2 shadow-[3px_3px_0_var(--color-secund)] transition-all duration-50 hover:translate-[-3px] hover:shadow-[6px_6px_0_var(--color-secund)] active:translate-none active:shadow-none'
+                className='pointer-events-auto cursor-(--cursor-default) border-2 border-secund bg-first p-2 shadow-[3px_3px_0_var(--color-secund)] transition-all duration-50 hover:-translate-0.75 hover:shadow-[6px_6px_0_var(--color-secund)] active:translate-none active:shadow-none'
                 onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
                 aria-label='back to top'
             >
