@@ -46,7 +46,7 @@ const About = () => {
     return (
         <section
             ref={sectionRef}
-            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-first px-12 py-24 md:px-24'
+            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-first px-12 py-24 shadow-[0_0_3rem_3rem_var(--color-first)] md:px-24'
         >
             <div
                 className={clsx(
