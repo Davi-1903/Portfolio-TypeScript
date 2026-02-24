@@ -46,7 +46,7 @@ const About = () => {
     return (
         <section
             ref={sectionRef}
-            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-first px-12 py-24  md:px-24'
+            className='flex min-h-screen flex-wrap items-center justify-center gap-12 bg-first px-12 py-24 md:px-24'
         >
             <div
                 className={clsx(
@@ -60,9 +60,9 @@ const About = () => {
                 <h2 className='font-primary text-5xl font-bold'>Who am i?</h2>
                 <hr className='my-2 border border-secund' />
                 <p className='font-secundary text-lg/normal'>
-                    I am a <strong>Web developer</strong>. My full name is{' '}
-                    <strong>Davi Francisco da Silva Fonseca</strong> and I am 17 years old. I currently live in
-                    Jucurutu, RN - Brazil. I'm in my 4th year of internet computing at <strong>IFRN</strong> - Campus
+                    I am a <strong>Web developer</strong>. My full name is -{' '}
+                    <strong>Davi Francisco da Silva Fonseca</strong> and I am 17 years old. I currently live in -
+                    Jucurutu, RN - Brazil. I'm in my 4th year of internet computing at <strong>IFRN</strong> - Campus -
                     Caicó
                 </p>
                 <h3 className='mt-4 font-primary text-3xl font-bold'>My skills</h3>

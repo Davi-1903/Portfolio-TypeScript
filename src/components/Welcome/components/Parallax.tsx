@@ -14,24 +14,16 @@ const Parallax = () => {
 
     return (
         <>
-            <div className='fixed top-1/2 left-1/2 w-full min-w-384 -translate-1/2'>
-                <img src={theme === 'light' ? LayerLight4 : LayerDark4} alt='Layer 4' className='w-full' />
-            </div>
+            <div className='absolute inset-0 bg-[url(/background-light/background-4.webp)] bg-cover bg-fixed bg-center dark:bg-[url(/background-dark/background-4.webp)]'></div>
             <div
-                className='absolute top-1/2 left-1/2 w-full min-w-384 -translate-1/2'
+                className='absolute inset-0 bg-[url(/background-light/background-3.webp)] bg-cover bg-center dark:bg-[url(/background-dark/background-3.webp)]'
                 style={{ transform: `translateY(${scroll / 2}px)` }}
-            >
-                <img src={theme === 'light' ? LayerLight3 : LayerDark3} alt='Layer 3' className='w-full' />
-            </div>
+            ></div>
             <div
-                className='absolute top-1/2 left-1/2 w-full min-w-384 -translate-1/2'
+                className='absolute inset-0 bg-[url(/background-light/background-2.webp)] bg-cover bg-center dark:bg-[url(/background-dark/background-2.webp)]'
                 style={{ transform: `translateY(${scroll / 4}px)` }}
-            >
-                <img src={theme === 'light' ? LayerLight2 : LayerDark2} alt='Layer 2' className='w-full' />
-            </div>
-            <div className='absolute top-1/2 left-1/2 w-full -translate-1/2'>
-                <img src={theme === 'light' ? LayerLight1 : LayerDark1} alt='Layer 1' className='w-full min-w-384' />
-            </div>
+            ></div>
+            <div className='absolute inset-0 bg-[url(/background-light/background-1.webp)] bg-cover bg-center dark:bg-[url(/background-dark/background-1.webp)]'></div>
         </>
     );
 };

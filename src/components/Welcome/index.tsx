@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 const Welcome = ({ loadingEnd }: WelcomeProps) => {
     return (
-        <section className='relative -z-1 grid h-screen place-items-center overflow-x-hidden select-none'>
+        <section className='relative -z-1 grid h-screen place-items-center select-none'>
             <Parallax />
             <h1
                 className={clsx(
